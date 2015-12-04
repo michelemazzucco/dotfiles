@@ -1,4 +1,4 @@
 # Dotfiles
 
 ### Getting started
-`git@github.com:daneden/dotfiles .dotfiles`
+`git@github.com:michelemazzucco/dotfiles .dotfiles`
