@@ -2,7 +2,15 @@
 	name = Michele Mazzucco
 	email = hello@michelemazzucco.it
 [push]
-	default = matching
-
+	default = current
 [github]
 	user = michelemazzucco
+[alias]
+	s = status -sb
+	status = status -sb
+	a = add -A .
+	co = checkout
+	cm = commit
+	p = push
+[merge]
+  tool = Sourcetree
