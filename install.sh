@@ -1,5 +1,9 @@
-msg() {
+message() {
   printf "${yel} ${pur}$*${end}\n"
+}
+
+ok() {
+  printf "...done\n\n"
 }
 
 # Variables
@@ -9,7 +13,9 @@ olddir=$HOME/.dotfiles_old/$now
 files="gitconfig gitignore"
 
 # Create symlink and create files in homedir from .dotfiles folder 
-msg "Create files..."
-for file in $files; do
+message "Create files..."
+for file in $files 
+do
   ln -s $dir/$file $HOME/.$file
 done
+ok
