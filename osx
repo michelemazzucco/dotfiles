@@ -1,0 +1,15 @@
+# Dark dock and status bar 
+defaults write NSGlobalDomain AppleInterfaceStyle Dark; killall Dock
+
+# Remove animation on opening dock icon
+defaults write com.apple.dock launchanim -bool false
+
+# Show and hide the dock
+defaults write com.apple.dock autohide -bool true
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
