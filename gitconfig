@@ -1,0 +1,8 @@
+[user]
+	name = Michele Mazzucco
+	email = hello@michelemazzucco.it
+[push]
+	default = matching
+
+[github]
+	user = michelemazzucc
