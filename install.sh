@@ -10,11 +10,11 @@ ok() {
 dir=~/.dotfiles
 now=`date +%Y-%m-%d-%H:%M:%S`
 olddir=$HOME/.dotfiles_old/$now
-files="gitconfig gitignore"
+files="gitconfig gitignore zshrc"
 
-# Create symlink and create files in homedir from .dotfiles folder 
+# Create symlink and create files in homedir from .dotfiles folder
 message "Create files..."
-for file in $files 
+for file in $files
 do
   ln -s $dir/$file $HOME/.$file
 done
