@@ -13,6 +13,8 @@
 	cm = commit
 	p = push
 [merge]
-  tool = Sourcetree
+  tool = atom
 [credential]
 	helper = osxkeychain
+[core]
+	excludesfile = /Users/michele/.gitignore
