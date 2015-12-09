@@ -6,8 +6,8 @@
 [github]
 	user = michelemazzucco
 [alias]
-	s = status -sb
-	status = status -sb
+	s = status
+	status = status
 	a = add -A .
 	co = checkout
 	cm = commit
