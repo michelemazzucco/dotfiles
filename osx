@@ -1,4 +1,19 @@
-# Dark dock and status bar 
+# -----------------------------------------------
+# Start
+# -----------------------------------------------
+
+# Ask admin password
+sudo -v
+
+# Keep it alive
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
+# -----------------------------------------------
+# UI/UX
+# -----------------------------------------------
+
+# Dark dock and status bar
 defaults write NSGlobalDomain AppleInterfaceStyle Dark; killall Dock
 
 # Remove animation on opening dock icon
@@ -7,9 +22,59 @@ defaults write com.apple.dock launchanim -bool false
 # Show and hide the dock
 defaults write com.apple.dock autohide -bool true
 
+# Set 'scale' effects when minimize window
+defaults write com.apple.dock mineffect -string "scale"
+
+
+# -----------------------------------------------
+# Trackpad & mouse
+# -----------------------------------------------
+
+# Enable tap to click on trackpad
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+
+# -----------------------------------------------
+# Finder
+# -----------------------------------------------
+
+# Show item info on Desktop
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+
+# Info on the right on Desktop
+/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
+
+# Snap to grid on Desktop
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
+# Set icon size to 44x44 on Desktop
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 44" ~/Library/Preferences/com.apple.finder.plist
+
+
+# -----------------------------------------------
+# Safari & inspector
+# -----------------------------------------------
+
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# -----------------------------------------------
+# Security & privacy
+# -----------------------------------------------
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+
+# -----------------------------------------------
+# Sketch
+# -----------------------------------------------
+
+# Force Sketch to stop version control
+defaults write -app Sketch ApplePersistence -bool no
