@@ -28,6 +28,7 @@ source $ZSH/oh-my-zsh.sh
 # -----------------------------------------------
 alias zshconfig="atom ~/.zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
+alias cl="clear"
 
 # apache and mysql aliases
 alias goapache="apachectl start"
