@@ -17,6 +17,7 @@ plugins=(git)
 # General
 # -----------------------------------------------
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:$HOME/bin"
 
 # -----------------------------------------------
 # Source Oh my zsh
