@@ -10,6 +10,9 @@ ok() {
   printf "...done\n\n"
 }
 
+brew_clean() {
+  brew update && brew upgrade && brew cleanup && brew cask cleanup
+}
 
 # -----------------------------------------------------------------
 # Variables
@@ -37,7 +40,7 @@ ok
 # -----------------------------------------------------------------
 
 # Install Homebrew
-if `type brew &>/dev/null`; then
+if type "brew" > /dev/null; then
   message "Homebrew found. Let's Go!"
 else
   message "Homebrew not found. Installing..."
@@ -45,20 +48,17 @@ else
   ok
 fi
 
+
 # Install Brew bundle
-if `type brew bundle &>/dev/null`; then
+if printf "brew bundle"  > /dev/null; then
   message "Brew bundle found."
   brew bundle
-  brew update
-  brew cleanup
-  brew cask cleanup
+  brew_clean
 else
   message "Homebrew not found. Installing..."
   brew tap Homebrew/bundle
   brew bundle
-  brew update
-  brew cleanup
-  brew cask cleanup
+  brew_clean
 fi
 ok
 
@@ -68,7 +68,11 @@ ok
 # -----------------------------------------------------------------
 
 # Set Zsh as Default shell
-chsh -s /bin/zsh
+if [[ ! `echo $SHELL` == "/bin/zsh" ]]; then
+  message "Set Zsh as default shell..."
+  chsh -s /bin/zsh
+  ok
+fi
 
 # Install Oh my zsh if doesn't exist
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
