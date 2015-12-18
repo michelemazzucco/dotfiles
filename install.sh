@@ -27,9 +27,10 @@ files="gitconfig gitignore zshrc"
 # Create symlink and create files in homedir from .dotfiles folder
 # -----------------------------------------------------------------
 
-message "Create files..."
+message "Remove old files and create new files symlinked..."
 for file in $files
 do
+  rm -rf $HOME/.$file
   ln -s $dir/$file $HOME/.$file
 done
 ok
@@ -80,3 +81,12 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 ok
+
+
+# -----------------------------------------------------------------
+# Fonts
+# -----------------------------------------------------------------
+
+if [ -d "$HOME/Library/Fonts" ]; then
+  cp -rf $dir/fonts/* $HOME/Library/Fonts
+fi
