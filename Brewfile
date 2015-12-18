@@ -55,3 +55,7 @@ cask 'parallels-desktop'
 
 # Freetime
 cask 'garmin-express'
+
+# App store apps
+# cask '1password'
+# cask 'transmit'
