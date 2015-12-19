@@ -7,8 +7,11 @@ A designer's approach to dotfiles.
 1. Clone the dotfiles folder<br/>
 `git@github.com:michelemazzucco/dotfiles ~/.dotfiles`
 
-2. Run install.sh<br/>
+2. Change directory
+`cd ~/.dotfiles`
+
+3. Run install.sh<br/>
 `./install.sh`
 
-3. Setup Mac configurations<br/>
+4. Setup Mac configurations<br/>
 `./osx`
