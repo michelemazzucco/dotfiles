@@ -65,6 +65,29 @@ ok
 
 
 # -----------------------------------------------------------------
+# npm packages
+# -----------------------------------------------------------------
+
+if type "npm" > /dev/null; then
+    message "Installing npm packages..."
+    npm install --global gulp
+    npm install --global bower
+    ok
+fi
+
+# -----------------------------------------------------------------
+# Install Ruby gems
+# -----------------------------------------------------------------
+
+if type "rbenv" > /dev/null; then
+    message "Installing Ruby gems..."
+    gem install sass
+    gem install jekyll
+    ok
+fi
+
+
+# -----------------------------------------------------------------
 # Shell
 # -----------------------------------------------------------------
 
@@ -79,8 +102,8 @@ fi
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   message "Installing Oh My Zsh..."
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  ok
 fi
-ok
 
 
 # -----------------------------------------------------------------
@@ -88,5 +111,7 @@ ok
 # -----------------------------------------------------------------
 
 if [ -d "$HOME/Library/Fonts" ]; then
+  message "Copying fonts in your Library Fonts folder..."
   cp -rf $dir/fonts/* $HOME/Library/Fonts
+  ok
 fi
