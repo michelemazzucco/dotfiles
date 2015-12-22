@@ -1,6 +1,6 @@
 # Dotfiles
 
-A designer's approach to dotfiles.
+A "designer's approach" to dotfiles.
 
 #### Installation
 
