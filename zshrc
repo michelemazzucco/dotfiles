@@ -17,7 +17,9 @@ plugins=(git)
 # General
 # -----------------------------------------------
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$PATH:$HOME/bin"
+eval "$(rbenv init -)"
 
 # -----------------------------------------------
 # Source Oh my zsh
