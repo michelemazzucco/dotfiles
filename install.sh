@@ -80,7 +80,10 @@ fi
 # -----------------------------------------------------------------
 
 if type "rbenv" > /dev/null; then
-    message "Installing Ruby gems..."
+    message "Installing Ruby with rbenv..."
+    # change ruby version if you want
+    rbenv install 2.0.0-p645 && rbenv local 2.0.0-p645 && rbenv rehash
+    # install gems
     gem install sass
     gem install jekyll
     ok
