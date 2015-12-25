@@ -5,6 +5,9 @@
 	],
 	"installed_packages":
 	[
-		"Git"
+		"Git",
+		"Markdown Preview",
+		"Package Control",
+		"Sass"
 	]
 }
