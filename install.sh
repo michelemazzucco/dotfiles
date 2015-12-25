@@ -75,6 +75,7 @@ if type "npm" > /dev/null; then
     ok
 fi
 
+
 # -----------------------------------------------------------------
 # Install Ruby gems
 # -----------------------------------------------------------------
@@ -118,3 +119,15 @@ if [ -d "$HOME/Library/Fonts" ]; then
   cp -rf $dir/fonts/* $HOME/Library/Fonts
   ok
 fi
+
+
+# -----------------------------------------------------------------
+# Sublime Configuration
+# -----------------------------------------------------------------
+
+# remove your files
+rm -rf /Users/$USER/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+rm -rf /Users/$USER/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-setting
+
+ln -s /Users/$USER/.dotfiles/sublime/Preferences.sublime-settings /Users/$USER/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+ln -s /Users/$USER/dotfiles/sublime/Package\ Control.sublime-settings /Users/$USER/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-setting
