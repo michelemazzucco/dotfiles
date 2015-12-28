@@ -39,6 +39,8 @@ cask 'sublime-text'
 cask 'iterm2'
 cask 'cleanmymac'
 cask 'appcleaner'
+cask 'imageoptim'
+cask 'rescuetime'
 
 # Design
 cask 'sketch'
