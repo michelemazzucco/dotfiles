@@ -18,6 +18,7 @@ brew 'tmux'
 brew 'php56'
 brew 'drush'
 brew 'rbenv ruby-build'
+brew 'youtube-dl'
 
 # Shell
 brew 'zsh'
