@@ -42,6 +42,7 @@ cask 'cleanmymac'
 cask 'appcleaner'
 cask 'imageoptim'
 cask 'rescuetime'
+cask 'the-unarchiver'
 
 # Design
 cask 'sketch'
