@@ -7,8 +7,10 @@
 	[
 		"Git",
 		"Markdown Preview",
+		"Material Theme",
 		"Package Control",
 		"Sass",
-		"SideBarEnhancements"
+		"SideBarEnhancements",
+		"Syntax Highlighting for PostCSS"
 	]
 }

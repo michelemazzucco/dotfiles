@@ -6,6 +6,15 @@
 	"indent_guide_options":
 	[
 		"draw_normal",
-		"draw_combined"
+		"draw_active"
 	],
+	"line_padding_top"             : 3,
+	"line_padding_bottom"          : 3,
+	"overlay_scroll_bars"          : "enabled",
+
+	// Material theme settings
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"material_theme_disable_folder_animation" : false,
+	"material_theme_small_statusbar"          : true,
 }
