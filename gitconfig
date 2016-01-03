@@ -18,3 +18,5 @@
 	helper = osxkeychain
 [core]
 	excludesfile = /Users/michele/.gitignore
+[color]
+	ui = auto
