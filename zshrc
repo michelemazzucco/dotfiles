@@ -33,6 +33,7 @@ alias zshconfig="atom ~/.zshrc"
 alias ohmyzsh="atom ~/.oh-my-zsh"
 alias cl="clear"
 alias dot="cd ~/.dotfiles"
+alias st="subl ."
 
 # apache and mysql aliases
 alias goapache="apachectl start"
