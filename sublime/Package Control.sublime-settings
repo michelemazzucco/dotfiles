@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Git",
+		"Jade",
 		"Markdown Preview",
 		"Material Theme",
 		"Package Control",
