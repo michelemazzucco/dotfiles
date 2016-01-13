@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Emmet",
 		"Git",
 		"Jade",
 		"Markdown Preview",
@@ -12,6 +13,7 @@
 		"Package Control",
 		"Sass",
 		"SideBarEnhancements",
+		"Stylus",
 		"Syntax Highlighting for PostCSS"
 	]
 }
