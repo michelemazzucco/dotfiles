@@ -72,6 +72,7 @@ if type "npm" > /dev/null; then
     message "Installing npm packages..."
     npm install --global gulp
     npm install --global bower
+    npm install --global speed-test
     # npm install --global nodemon
     ok
 fi
