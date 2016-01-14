@@ -35,6 +35,13 @@ alias cl="clear"
 alias dot="cd ~/.dotfiles"
 alias st="subl ."
 
+# git aliases
+alias gs="git status"
+alias ga="git add -A"
+alias gpl="git pull"
+alias gps="git push"
+alias wip="git add -A && git commit -m 'WIP'"
+
 # apache and mysql aliases
 alias goapache="apachectl start"
 alias stopapache="apachectl stop"
