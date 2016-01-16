@@ -73,7 +73,7 @@ if type "npm" > /dev/null; then
     npm install --global gulp
     npm install --global bower
     npm install --global speed-test
-    # npm install --global nodemon
+    npm install --global nodemon
     ok
 fi
 
