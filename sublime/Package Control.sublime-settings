@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Color Highlighter",
+		"EditorConfig",
 		"Emmet",
 		"Git",
 		"Jade",
