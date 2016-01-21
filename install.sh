@@ -15,25 +15,44 @@ brew_clean() {
 }
 
 # -----------------------------------------------------------------
+# Check dest dir is provided
+# -----------------------------------------------------------------
+if [ -z "$1" ]; then
+  echo "please provide dest dir, ie. 'install.sh ~' OR 'install.sh \$HOME' OR 'install.sh ./test'";
+  exit
+else
+  dest=$1
+  mkdir -p $dest #creating dest dir if not exists
+  echo "symlinking dotfiles in '$1'";
+fi
+
+
+# -----------------------------------------------------------------
 # Variables
 # -----------------------------------------------------------------
 
-dir=~/.dotfiles
+dir=$(pwd) # reading dir from current directory
 now=`date +%Y-%m-%d-%H:%M:%S`
-files="gitconfig gitignore zshrc"
 
 
 # -----------------------------------------------------------------
 # Create symlink and create files in homedir from .dotfiles folder
 # -----------------------------------------------------------------
 
+file_paths=$dir/*
+file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md"
 message "Remove old files and create new files symlinked..."
-for file in $files
+for file_path in $file_paths
 do
-  rm -rf $HOME/.$file
-  ln -s $dir/$file $HOME/.$file
+  file_name="${file_path##*/}"  # get filename
+  if ! [[ $file_name_excluded =~ $file_name ]]; then # check path is not excluded
+    echo "Processing $file_name"
+    rm -rf $dest/.$file_name
+    ln -s $file_path $dest/.$file_name
+  fi
 done
 ok
+exit
 
 
 # -----------------------------------------------------------------
@@ -97,7 +116,7 @@ fi
 # Install Pow
 # -----------------------------------------------------------------
 
-if [ ! -d "$HOME/.pow" ]; then
+if [ ! -d "$dest/.pow" ]; then
   message "Installing Pow..."
   curl get.pow.cx | sh
 fi
@@ -115,7 +134,7 @@ if [[ ! `echo $SHELL` == "/bin/zsh" ]]; then
 fi
 
 # Install Oh my zsh if doesn't exist
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
+if [ ! -d "$dest/.oh-my-zsh" ]; then
   message "Installing Oh My Zsh..."
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   ok
@@ -126,9 +145,9 @@ fi
 # Fonts
 # -----------------------------------------------------------------
 
-if [ -d "$HOME/Library/Fonts" ]; then
+if [ -d "$dest/Library/Fonts" ]; then
   message "Copying fonts in your Library Fonts folder..."
-  cp -rf $dir/fonts/* $HOME/Library/Fonts
+  cp -rf $dir/fonts/* $dest/Library/Fonts
   ok
 fi
 
