@@ -43,6 +43,7 @@ cask 'appcleaner'
 cask 'imageoptim'
 cask 'rescuetime'
 cask 'the-unarchiver'
+cask 'diffmerge'
 
 # Design
 cask 'sketch'
