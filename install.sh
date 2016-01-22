@@ -8,13 +8,14 @@ source ./utils/functions.sh
 # -----------------------------------------------------------------
 # Check dest dir is provided
 # -----------------------------------------------------------------
+
 if [ -z "$1" ]; then
-  echo "please provide dest dir, ie. 'install.sh ~' OR 'install.sh \$HOME' OR 'install.sh ./test'";
+  echo "Please provide dest dir, ie. 'install.sh ~' OR 'install.sh \$HOME' OR 'install.sh ./test'";
   exit
 else
   dest=$1
   mkdir -p $dest #creating dest dir if not exists
-  echo "symlinking dotfiles in '$1'";
+  echo "Symlinking dotfiles in '$1'...";
 fi
 
 
@@ -31,7 +32,7 @@ now=`date +%Y-%m-%d-%H:%M:%S`
 # -----------------------------------------------------------------
 
 file_paths=$dir/*
-file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md"
+file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils"
 message "Remove old files and create new files symlinked..."
 for file_path in $file_paths
 do
