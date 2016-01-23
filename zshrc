@@ -17,9 +17,12 @@ plugins=(history git git-extras node npm brew)
 # General
 # -----------------------------------------------
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$PATH:$HOME/bin"
-eval "$(rbenv init -)"
+
+if which rbenv &> /dev/null; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 # -----------------------------------------------
 # Source Oh my zsh
@@ -27,24 +30,6 @@ eval "$(rbenv init -)"
 source $ZSH/oh-my-zsh.sh
 
 # -----------------------------------------------
-# Aliases
+# Source Aliases
 # -----------------------------------------------
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
-alias cl="clear"
-alias dot="cd ~/.dotfiles"
-alias st="subl ."
-
-# git aliases
-alias gs="git status"
-alias ga="git add -A"
-alias gpl="git pull"
-alias gps="git push"
-alias wip="git add -A && git commit -m 'WIP'"
-
-# apache and mysql aliases
-alias goapache="apachectl start"
-alias stopapache="apachectl stop"
-alias gomysql="mysql.server start"
-alias stopmysql="mysql.server stop"
-alias publickey="pbcopy < ~/.ssh/id_rsa.pub"
+source $HOME/.aliases
