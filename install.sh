@@ -10,12 +10,12 @@ source ./utils/functions.sh
 # -----------------------------------------------------------------
 
 if [ -z "$1" ]; then
-  echo "Please provide dest dir, ie. 'install.sh ~' OR 'install.sh \$HOME' OR 'install.sh ./test'";
+  message "Please provide dest dir, i.e. 'install.sh ~' OR 'install.sh $HOME' OR 'install.sh ./test'";
   exit
 else
   dest=$1
   mkdir -p $dest #creating dest dir if not exists
-  echo "Symlinking dotfiles in '$1'...";
+  message "Symlinking dotfiles in '$1'...";
 fi
 
 
@@ -38,12 +38,12 @@ for file_path in $file_paths
 do
   file_name="${file_path##*/}"  # get filename
   if ! [[ $file_name_excluded =~ $file_name ]]; then # check path is not excluded
-    echo "Processing $file_name"
+    message "Processing $file_name..."
     rm -rf $dest/.$file_name
     ln -s $file_path $dest/.$file_name
+    ok
   fi
 done
-ok
 exit
 
 
