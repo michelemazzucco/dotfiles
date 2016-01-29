@@ -32,7 +32,7 @@ now=`date +%Y-%m-%d-%H:%M:%S`
 # -----------------------------------------------------------------
 
 file_paths=$dir/*
-file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils"
+file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils Makefile"
 message "Remove old files and create new files symlinked..."
 for file_path in $file_paths
 do
