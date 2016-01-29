@@ -1,14 +1,11 @@
 # -----------------------------------------------------------------
 # Import utils
 # -----------------------------------------------------------------
-
 source ./utils/functions.sh
-
 
 # -----------------------------------------------------------------
 # Check dest dir is provided
 # -----------------------------------------------------------------
-
 if [ -z "$1" ]; then
   message "Please provide dest dir, i.e. 'install.sh ~' OR 'install.sh $HOME' OR 'install.sh ./test'";
   exit
@@ -18,19 +15,15 @@ else
   message "Symlinking dotfiles in '$1'...";
 fi
 
-
 # -----------------------------------------------------------------
 # Variables
 # -----------------------------------------------------------------
-
 dir=$(pwd) # reading dir from current directory
 now=`date +%Y-%m-%d-%H:%M:%S`
-
 
 # -----------------------------------------------------------------
 # Create symlink and create files in homedir from .dotfiles folder
 # -----------------------------------------------------------------
-
 file_paths=$dir/*
 file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils"
 message "Remove old files and create new files symlinked..."
@@ -60,7 +53,6 @@ else
   ok
 fi
 
-
 # Install Brew bundle
 if printf "brew bundle"  > /dev/null; then
   message "Brew bundle found."
@@ -74,11 +66,9 @@ else
 fi
 ok
 
-
 # -----------------------------------------------------------------
 # npm packages
 # -----------------------------------------------------------------
-
 if type "npm" > /dev/null; then
     message "Installing npm packages..."
     npm install --global gulp
@@ -88,11 +78,9 @@ if type "npm" > /dev/null; then
     ok
 fi
 
-
 # -----------------------------------------------------------------
 # Install Ruby gems
 # -----------------------------------------------------------------
-
 if type "rbenv" > /dev/null; then
     message "Installing Ruby with rbenv..."
     # change ruby version if you want
@@ -103,16 +91,13 @@ if type "rbenv" > /dev/null; then
     ok
 fi
 
-
 # -----------------------------------------------------------------
 # Install Pow
 # -----------------------------------------------------------------
-
 if [ ! -d "$dest/.pow" ]; then
   message "Installing Pow..."
   curl get.pow.cx | sh
 fi
-
 
 # -----------------------------------------------------------------
 # Shell
@@ -132,11 +117,9 @@ if [ ! -d "$dest/.oh-my-zsh" ]; then
   ok
 fi
 
-
 # -----------------------------------------------------------------
 # bin folder
 # -----------------------------------------------------------------
-
 if [ -d "$dest/bin" ]; then
   ln -s $dir/bin/* $dest/bin/
 else
@@ -144,17 +127,14 @@ else
   ln -s $dir/bin/* $dest/bin/
 fi
 
-
 # -----------------------------------------------------------------
 # Fonts
 # -----------------------------------------------------------------
-
 if [ -d "$dest/Library/Fonts" ]; then
   message "Copying fonts in your Library Fonts folder..."
   cp -rf $dir/fonts/* $dest/Library/Fonts
   ok
 fi
-
 
 # -----------------------------------------------------------------
 # Sublime Configuration
