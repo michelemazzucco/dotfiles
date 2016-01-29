@@ -32,7 +32,7 @@ now=`date +%Y-%m-%d-%H:%M:%S`
 # -----------------------------------------------------------------
 
 file_paths=$dir/*
-file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils Makefile"
+file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils"
 message "Remove old files and create new files symlinked..."
 for file_path in $file_paths
 do
@@ -130,6 +130,18 @@ if [ ! -d "$dest/.oh-my-zsh" ]; then
   message "Installing Oh My Zsh..."
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   ok
+fi
+
+
+# -----------------------------------------------------------------
+# bin folder
+# -----------------------------------------------------------------
+
+if [ -d "$dest/bin" ]; then
+  ln -s $dir/bin/* $dest/bin/
+else
+  mkdir $dest/bin/
+  ln -s $dir/bin/* $dest/bin/
 fi
 
 
