@@ -1,6 +1,6 @@
 # General
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
 alias cl="clear"
 alias dot="cd ~/.dotfiles"
 alias st="subl ."
