@@ -11,7 +11,7 @@ ZSH_THEME="mh"
 # -----------------------------------------------
 # Plugins
 # -----------------------------------------------
-plugins=(history git git-extras node npm brew)
+plugins=(history git git-extras node npm brew zsh-syntax-highlighting)
 
 # -----------------------------------------------
 # General
