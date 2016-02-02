@@ -70,10 +70,7 @@ ok
 # -----------------------------------------------------------------
 if type "npm" > /dev/null; then
     message "Installing npm packages..."
-    npm install --global gulp
-    npm install --global bower
-    npm install --global speed-test
-    npm install --global nodemon
+    npm install --global gulp bower speed-test nodemon
     ok
 fi
 
@@ -115,6 +112,11 @@ if [ ! -d "$dest/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   ok
 fi
+
+# Install Oh my zsh plugins
+if [ -d "$dest/.oh-my-zsh/custom/plugins" ]; then
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $dest/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+fi 
 
 # -----------------------------------------------------------------
 # bin folder
