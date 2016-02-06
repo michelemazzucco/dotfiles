@@ -6,6 +6,7 @@
 	"draw_white_space": "selection",
 	"bold_folder_labels": true,
 	"ensure_newline_at_eof_on_save": true,
+	"highlight_line": true,
 	"indent_guide_options":
 	[
 		"draw_normal",
