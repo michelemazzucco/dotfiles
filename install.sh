@@ -1,13 +1,13 @@
 # -----------------------------------------------------------------
 # Import utils
 # -----------------------------------------------------------------
-source ./utils/functions.sh
+source ./utils.sh
 
 # -----------------------------------------------------------------
 # Check dest dir is provided
 # -----------------------------------------------------------------
 if [ -z "$1" ]; then
-  message "Please provide dest dir, i.e. 'install.sh ~' OR 'install.sh $HOME' OR 'install.sh ./test'";
+  error "Please provide dest dir, i.e. 'install.sh ~' OR 'install.sh $HOME' OR 'install.sh ./test'";
   exit
 else
   dest=$1
@@ -25,7 +25,7 @@ now=`date +%Y-%m-%d-%H:%M:%S`
 # Create symlink and create files in homedir from .dotfiles folder
 # -----------------------------------------------------------------
 file_paths=$dir/*
-file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils"
+file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils.sh"
 message "Remove old files and create new files symlinked..."
 for file_path in $file_paths
 do
