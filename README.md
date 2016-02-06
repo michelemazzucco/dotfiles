@@ -11,7 +11,7 @@ A "designer's approach" to dotfiles.
 `cd ~/.dotfiles`
 
 3. Run install.sh<br/>
-`./install.sh`
+`./install.sh <folder-name>`
 
 4. Setup Mac configurations<br/>
 `./osx`
@@ -32,7 +32,7 @@ A "designer's approach" to dotfiles.
 `cd ~/.dotfiles`
 
 4. Run install.sh<br/>
-`./install.sh`
+`./install.sh <folder-name>`
 
 5. Setup Mac configurations<br/>
 `./osx`
