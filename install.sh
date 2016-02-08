@@ -82,8 +82,7 @@ if type "rbenv" > /dev/null; then
     # change ruby version if you want
     rbenv install 2.0.0-p645 && rbenv local 2.0.0-p645 && rbenv rehash
     # install gems
-    gem install sass
-    gem install jekyll
+    gem install sass && gem install jekyll && gem install bundle
     ok
 fi
 
@@ -112,11 +111,6 @@ if [ ! -d "$dest/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   ok
 fi
-
-# Install Oh my zsh plugins
-if [ -d "$dest/.oh-my-zsh/custom/plugins" ]; then
-  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $dest/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-fi 
 
 # -----------------------------------------------------------------
 # bin folder
