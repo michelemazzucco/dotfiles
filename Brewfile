@@ -17,6 +17,7 @@ brew 'tree'
 brew 'tmux'
 brew 'php56'
 brew 'drush'
+brew 'imagemagick'
 brew 'rbenv ruby-build'
 brew 'youtube-dl'
 
