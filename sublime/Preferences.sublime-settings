@@ -17,6 +17,7 @@
 	"overlay_scroll_bars": "enabled",
 	"theme": "Material-Theme-Darker.sublime-theme",
 
+
 	// Material theme settings
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"material_theme_disable_folder_animation": true,
@@ -24,3 +25,4 @@
 	"material_theme_contrast_mode": true,
 	"material_theme_panel_separator": true
 }
+

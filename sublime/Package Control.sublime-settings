@@ -9,14 +9,13 @@
 		"EditorConfig",
 		"Emmet",
 		"Git",
+		"GitGutter",
 		"Jade",
 		"Markdown Preview",
 		"Material Theme",
-		"Modific",
 		"Package Control",
 		"Sass",
 		"SideBarEnhancements",
-		"Stylus",
-		"Syntax Highlighting for PostCSS"
+		"Stylus"
 	]
 }
