@@ -2,7 +2,7 @@
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 alias cl="clear"
-alias dot="cd ~/.dotfiles"
+alias dot="cd ~/.dotfiles && st"
 alias pro="cd ~/projects"
 alias st="subl ."
 alias publickey="pbcopy < ~/.ssh/id_rsa.pub"
@@ -31,9 +31,10 @@ alias mysql.stop="mysql.server stop"
 alias mysql.restart="mysql.server stop && mysql.server start"
 
 # Npm aliases
-alias ni='npm install'
-alias nis='npm install --save'
-alias nid='npm install --save-dev'
-alias nig='npm install --global'
-alias nr='npm run'
-alias nf='npm cache clean && rm -rf node_modules && npm install'
+alias ni="npm install"
+alias nis="npm install --save"
+alias nid="npm install --save-dev"
+alias nig="npm install --global"
+alias nr="npm run"
+alias ns="npm start"
+alias nf="npm cache clean && rm -rf node_modules && npm install"
