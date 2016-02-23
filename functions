@@ -1,0 +1,5 @@
+# Go to project folder and open it, nothing special
+function open() {
+  url=~/projects # Your projects folder
+  cd $url/$1 && st
+}

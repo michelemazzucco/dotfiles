@@ -25,7 +25,7 @@ now=`date +%Y-%m-%d-%H:%M:%S`
 # Create symlink and create files in homedir from .dotfiles folder
 # -----------------------------------------------------------------
 file_paths=$dir/*
-file_name_excluded="install.sh fonts iterm sublime test Brewfile osx README.md utils.sh"
+file_name_excluded="install.sh fonts iterm sublime Brewfile osx README.md utils.sh"
 message "Remove old files and create new files symlinked..."
 for file_path in $file_paths
 do

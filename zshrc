@@ -33,3 +33,8 @@ source $ZSH/oh-my-zsh.sh
 # Source Aliases
 # -----------------------------------------------
 source $HOME/.aliases
+
+# -----------------------------------------------
+# Source functions
+# -----------------------------------------------
+source $HOME/.functions 
