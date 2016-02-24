@@ -1,5 +1,20 @@
+# -----------------------------------------------------------------
+# Colors
+# -----------------------------------------------------------------
+export RED="\e[0;31m"
+export GREEN="\e[0;32m"
+export YELLOW="\e[1;33m"
+export BLUE="\e[0;34m"
+
+# -----------------------------------------------------------------
 # Go to project folder and open it, nothing special
-function open() {
-  url=~/projects # Your projects folder
-  cd $url/$1 && st
+# -----------------------------------------------------------------
+open() {
+  URL=~/projects # Your projects folder
+  DIR=$1
+  if [[ ! -d $URL/$DIR ]]; then
+    printf "$RED""Project not exist.\n"
+  else
+    cd $URL/$DIR && st
+  fi
 }
