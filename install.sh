@@ -82,7 +82,7 @@ if type "rbenv" > /dev/null; then
     # change ruby version if you want
     rbenv install 2.0.0-p645 && rbenv local 2.0.0-p645 && rbenv rehash
     # install gems
-    gem install sass && gem install jekyll && gem install bundle
+    gem install sass && gem install jekyll && gem install bundle && gem install rails -v 4.2.4
     ok
 fi
 
