@@ -9,7 +9,7 @@ export BLUE="\e[0;34m"
 # -----------------------------------------------------------------
 # Go to project folder and open it, nothing special
 # -----------------------------------------------------------------
-open() {
+workon() {
   URL=~/projects # Your projects folder
   DIR=$1
   if [[ ! -d $URL/$DIR ]]; then
