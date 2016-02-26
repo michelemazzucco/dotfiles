@@ -13,7 +13,7 @@
 	cm = commit
 	p = push
 [merge]
-  tool = opendiff	
+  tool = diffmerge	
 [credential]
 	helper = osxkeychain
 [core]
