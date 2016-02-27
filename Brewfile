@@ -20,6 +20,7 @@ brew 'drush'
 brew 'imagemagick'
 brew 'rbenv ruby-build'
 brew 'youtube-dl'
+brew 'vim --override-system-vi'
 
 # Shell
 brew 'zsh'
