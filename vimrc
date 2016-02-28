@@ -14,12 +14,6 @@ set shiftwidth=2
 set list listchars=tab:»·,trail:·
 :set list
 
-" Automatically trim whitespace on save
-autocmd FileWritePre    * :call TrimWhiteSpace()
-autocmd FileAppendPre   * :call TrimWhiteSpace()
-autocmd FilterWritePre  * :call TrimWhiteSpace()
-autocmd BufWritePre     * :call TrimWhiteSpace()
-
 " Syntax
 filetype plugin indent on
 syntax on 
