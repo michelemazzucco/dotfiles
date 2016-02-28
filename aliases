@@ -1,6 +1,6 @@
 # General
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cl="clear"
 alias dot="cd ~/.dotfiles"
 alias pro="cd ~/projects"
