@@ -23,9 +23,9 @@ alias gps="git push"
 alias wip="git add -A && git commit -m 'WIP'"
 
 # Apache and MySQL aliases
-alias apache.start="apachectl start"
-alias apache.stop="apachectl stop"
-alias apache.restart="apachectl stop && apachectl start"
+alias apache.start="sudo apachectl start"
+alias apache.stop="sudo apachectl stop"
+alias apache.restart="sudo apachectl restart"
 alias mysql.start="mysql.server start"
 alias mysql.stop="mysql.server stop"
 alias mysql.restart="mysql.server stop && mysql.server start"
