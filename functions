@@ -9,12 +9,40 @@ export BLUE="\e[0;34m"
 # -----------------------------------------------------------------
 # Go to project folder and open it, nothing special
 # -----------------------------------------------------------------
-workon() {
-  URL=~/projects # Your projects folder
-  DIR=$1
-  if [[ ! -d $URL/$DIR ]]; then
+function workon() {
+  base_url='$HOME/projects' # Your projects folder
+  project=$1
+  if [[ ! -d $base_url/$project ]]; then
     printf "$RED""Project not exist.\n"
   else
-    cd $URL/$DIR && st
+    cd $base_url/$project && st
+  fi
+}
+
+# -----------------------------------------------------------------
+# Add notes to my folder
+# -----------------------------------------------------------------
+function an() {
+  today=`date +%F`
+  base_url="$HOME/projects/my-notes"
+  prv="$base_url/private"
+  publ="$base_url/public"
+  name="$1"
+  extension=md
+
+  if [[ "$1" == "prv" ]] && [[ ! -d $prv ]] || [[ ! -d $prv/$today ]]; then
+    name=$2
+    mkdir -p $prv/$today
+    vim $prv/$today/$name.$extension
+  elif [[ "$1" == "prv" ]] && [[ -d $prv ]] && [[ -d $prv/$today ]]; then
+    name=$2
+    vim $prv/$today/$name.$extension 
+  elif [[ ! -z "$1" ]] && [[ ! "$1" == "prv" ]] && [[ -d $publ/$today ]]; then
+    vim $publ/$today/$name.$extension
+  elif [[ ! -z "$1" ]] && [[ ! "$1" == "prv" ]] && [[ ! -d $publ/$today ]]; then
+    mkdir -p $publ/$today
+    vim $publ/$today/$name.$extension 
+  elif [[ -z "$1" ]]; then
+    printf "$RED""Provide a file name, i.e. 'an <name-of-your-file>' OR 'an prv <name-of-your-file>'.\n"
   fi
 }

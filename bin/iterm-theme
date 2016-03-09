@@ -1,1 +1,1 @@
-cp -p ~/.dotfiles/iterm/dracula-iterm_mm.itermcolors ~/Desktop
+cp -p ~/.dotfiles/iterm/iterm_theme_mm.itermcolors ~/Desktop
