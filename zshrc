@@ -18,6 +18,7 @@ plugins=(history git git-extras node npm brew osx)
 # -----------------------------------------------
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$HOME/bin"
+export EDITOR="vim" # Use Vim
 
 if which rbenv &> /dev/null; then
   export PATH="$HOME/.rbenv/bin:$PATH"
