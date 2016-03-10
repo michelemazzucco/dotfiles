@@ -17,6 +17,9 @@ set mouse=a " Enable mouse
 set nowrap
 set nu " Enable line numbers
 set title
+set noshowmode
+set visualbell
+set wildmenu
 
 " Tabs
 set smarttab
