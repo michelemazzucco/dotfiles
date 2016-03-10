@@ -48,19 +48,22 @@ iabbrev VV ↓
 iabbrev aa λ
 
 " Plugins -------------------------------------------------------------
-
 call plug#begin('~/.vim/plugged')
-Plug 'mhartington/oceanic-next'
+
+" Syntax
 Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'
-call plug#end()
+
+" Theme
+Plug 'easysid/mod8.vim'
 
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
+call plug#end()
 
 " Theme
-colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
+colorscheme mod8
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
