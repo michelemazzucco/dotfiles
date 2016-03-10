@@ -1,3 +1,7 @@
 # Common extensions
 *.swp
 .svn
+
+# Vim plugins
+vim/*.
+vim/plugged
