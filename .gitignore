@@ -5,3 +5,6 @@
 # Vim plugins
 vim/*.
 vim/plugged
+vim/swaps
+vim/backups
+vim/undo

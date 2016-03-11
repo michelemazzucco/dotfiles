@@ -5,6 +5,11 @@ set t_Co=256
 set background=dark
 syntax on
 
+" Directories -------------------------------------------------------------
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+set undodir=~/.vim/undo
+
 " Basics -------------------------------------------------------------
 set autoindent " Copying autoindent
 set backspace=indent,eol,start
