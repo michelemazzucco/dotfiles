@@ -48,7 +48,7 @@ set ruler
 set laststatus=2
 set showmatch
 
-" Quick shortcur
+" Quick shortcut
 iabbrev >> →
 iabbrev << ←
 iabbrev ^^ ↑
@@ -64,14 +64,18 @@ Plug 'cakebaker/scss-syntax.vim'
 
 " Theme
 Plug 'easysid/mod8.vim'
+colorscheme mod8
 
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+" Plugins configuration -----------------------------------------------
+
 " Theme
 colorscheme mod8
 
+" Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
