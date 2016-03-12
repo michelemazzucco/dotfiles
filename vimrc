@@ -68,13 +68,10 @@ Plug 'easysid/mod8.vim'
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 " Plugins configuration -----------------------------------------------
-
-" Theme
-colorscheme mod8
-
-" Airline
+colorscheme mod8 " Theme
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
