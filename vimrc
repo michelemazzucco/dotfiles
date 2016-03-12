@@ -64,7 +64,6 @@ Plug 'cakebaker/scss-syntax.vim'
 
 " Theme
 Plug 'easysid/mod8.vim'
-colorscheme mod8
 
 " Airline
 Plug 'vim-airline/vim-airline'
