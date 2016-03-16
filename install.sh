@@ -95,18 +95,6 @@ if [ ! -d "$dest/.pow" ]; then
 fi
 
 # -----------------------------------------------------------------
-# Vim
-# -----------------------------------------------------------------
-if [ -d "$dest/.vim" ]; then
-  ln -s $dir/vim $dest/.vim
-else
-  rm -rf $dest/.vim
-  ln -s $dir/vim $dest/.vim
-fi
-
-mkdir $dest/.vim/undo $dest/.vim/swaps $dest/.vim/backups
-
-# -----------------------------------------------------------------
 # Shell
 # -----------------------------------------------------------------
 
@@ -123,6 +111,23 @@ if [ ! -d "$dest/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   ok
 fi
+
+if [ -d "$dest/.oh-my-zsh" ]; then
+  mkdir -p $dest/.oh-my-zsh/custom/themes
+  ln -s $dir/term/mhl.zsh-theme $dest/.oh-my-zsh/custom/themes
+fi
+
+# -----------------------------------------------------------------
+# Vim
+# -----------------------------------------------------------------
+if [ -d "$dest/.vim" ]; then
+  ln -s $dir/vim $dest/.vim
+else
+  rm -rf $dest/.vim
+  ln -s $dir/vim $dest/.vim
+fi
+
+mkdir $dest/.vim/undo $dest/.vim/swaps $dest/.vim/backups
 
 # -----------------------------------------------------------------
 # bin folder
