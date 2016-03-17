@@ -36,7 +36,7 @@ set tabstop=2
 set shiftwidth=2
 
 " Invisible charater
-set lcs=tab:›\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:›\ ,trail:·,nbsp:_
 :set list
 
 " Numbers
@@ -72,6 +72,5 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Plugins configuration -----------------------------------------------
-colorscheme mod8 " Theme
+colorscheme mod8 " T1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
