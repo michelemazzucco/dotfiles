@@ -9,15 +9,21 @@ export BLUE="\e[0;34m"
 # -----------------------------------------------------------------
 # Go to project folder and open it, nothing special
 # -----------------------------------------------------------------
-function workon() {
-  base_url='$HOME/projects' # Your projects folder
-  project=$1
-  if [[ ! -d $base_url/$project ]]; then
-    printf "$RED""Project not exist.\n"
-  else
-    cd $base_url/$project && st
-  fi
-}
+#function workon() {
+#  base_url=$HOME/projects # Your projects folder
+#  project=$1
+#  if [[ ! -d $base_url/$project ]]; then
+#    printf "$RED""Project not exist.\n"
+#    echo $base_url/$project
+#  else
+#    cd $base_url/$project && st
+#  fi
+#}
+
+# _complete() {
+#   _files -W $HOME/projects
+# }
+# compdef _complete workon 
 
 # -----------------------------------------------------------------
 # Add notes to my folder
