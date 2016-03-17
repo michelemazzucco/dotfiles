@@ -24,6 +24,7 @@ brew 'vim --override-system-vi'
 
 # Shell
 brew 'zsh'
+brew 'michaeldfallen/formula/git-radar'
 
 # -----------------------------------------------
 # Install software
