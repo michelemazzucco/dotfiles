@@ -9,7 +9,7 @@ alias publickey="pbcopy < ~/.ssh/id_rsa.pub"
 alias l="ls -l"
 
 # Open files
-alias f="open -a Finder"
+alias f="open ."
 alias ch="open -a google\ chrome"
 alias opera="open -a opera"
 alias safari="open -a safari"

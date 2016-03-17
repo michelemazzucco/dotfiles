@@ -1,20 +1,12 @@
-# mh theme
-# preview: http://cl.ly/1y2x0W0E3t2C0F29043z
-
 # features:
-# path is autoshortened to ~30 characters
-# displays git status (if applicable in current folder)
-# turns username green if superuser, otherwise it is white
-
-# if superuser make the username green
-if [ $UID -eq 0 ]; then 
-  NCOLOR="green"; 
-else 
-  NCOLOR="white"; 
-fi
+# path is autoshortened to ~25 characters
 
 # prompt
-PROMPT='[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%(!.#.$) '
+PROMPT="%{$fg[$NCOLOR]%}%n%{$reset_color%}:%{$fg[red]%}%25<...<%~%<<%{$reset_color%} %(!.#.$) "
+
+# Git radar format
+# export GIT_RADAR_FORMAT="(%{branch} %{local}%{changes})"
+# \$(git-radar --zsh )
 RPROMPT='$(git_prompt_info)'
 
 # git theming
