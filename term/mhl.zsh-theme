@@ -1,22 +1,19 @@
-# features:
-# path is autoshortened to ~25 characters
+# Features:
+# Path is autoshortened to ~25 characters
 
-SUCCESS_COLOR=$FG[071]
-FAILURE_COLOR=$FG[124]
+# Colors
+USER_COLOR=$FG[255]
+SUCCESS_COLOR=$FG[113]
+FAILURE_COLOR=$FG[001]
+GIT_COLOR=$FG[228]
 
 # Prompt
-PROMPT="%{$fg[$NCOLOR]%}%n%{$reset_color%}:%(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})%25<...<%~%<<%{$reset_color%} %(!.#.$) "
+PROMPT="%{$USER_COLOR%}%n%{$reset_color%}: %(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})%25<...<%~%<<%{$reset_color%} %(!.#.$) "
 
 # Git radar format
-# export GIT_RADAR_FORMAT="(%{branch} %{local}%{changes})"
-# \$(git-radar --zsh )
-RPROMPT='$(git_prompt_info)'
-
-# git theming
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[gray]%}(%{$fg_no_bold[yellow]%}%B"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[gray]%})%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_CLEAN=""
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%}✱"
+export GIT_RADAR_FORMAT="(%{branch} %{local}%{changes})"
+export GIT_RADAR_COLOR_BRANCH=$GIT_COLOR
+RPROMPT='$(git-radar --zsh )'
 
 # LS colors, made with http://geoff.greer.fm/lscolors/
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
