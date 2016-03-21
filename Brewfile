@@ -21,6 +21,7 @@ brew 'imagemagick'
 brew 'rbenv ruby-build'
 brew 'youtube-dl'
 brew 'vim --override-system-vi'
+brew 'openssl'
 
 # Shell
 brew 'zsh'
