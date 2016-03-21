@@ -1,8 +1,11 @@
 # features:
 # path is autoshortened to ~25 characters
 
-# prompt
-PROMPT="%{$fg[$NCOLOR]%}%n%{$reset_color%}:%{$fg[red]%}%25<...<%~%<<%{$reset_color%} %(!.#.$) "
+SUCCESS_COLOR=$FG[071]
+FAILURE_COLOR=$FG[124]
+
+# Prompt
+PROMPT="%{$fg[$NCOLOR]%}%n%{$reset_color%}:%(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})%25<...<%~%<<%{$reset_color%} %(!.#.$) "
 
 # Git radar format
 # export GIT_RADAR_FORMAT="(%{branch} %{local}%{changes})"

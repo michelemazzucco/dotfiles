@@ -41,3 +41,4 @@ alias nf="npm cache clean && rm -rf node_modules && npm install"
 
 # Typos
 alias npm unistall="npm uninstall"
+alias brew unistall="brew uninstall"
