@@ -11,7 +11,7 @@ GIT_COLOR=$FG[228]
 PROMPT="%{$USER_COLOR%}%n%{$reset_color%}: %(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})%25<...<%~%<<%{$reset_color%} %(!.#.$) "
 
 # Git radar format
-export GIT_RADAR_FORMAT="(%{branch} %{local}%{changes})"
+export GIT_RADAR_FORMAT="(%{branch} :%{local}: %{changes})"
 export GIT_RADAR_COLOR_BRANCH=$GIT_COLOR
 RPROMPT='$(git-radar --zsh )'
 
