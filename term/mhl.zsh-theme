@@ -3,7 +3,7 @@
 
 # Colors
 USER_COLOR=$FG[255]
-SUCCESS_COLOR=$FG[113]
+SUCCESS_COLOR=$FG[012]
 FAILURE_COLOR=$FG[001]
 GIT_COLOR=$FG[228]
 
@@ -11,9 +11,9 @@ GIT_COLOR=$FG[228]
 PROMPT="%{$USER_COLOR%}%n%{$reset_color%}: %(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})%25<...<%~%<<%{$reset_color%} %(!.#.$) "
 
 # Git radar format
-export GIT_RADAR_FORMAT="[%{branch}] %{local} %{changes}"
+export GIT_RADAR_FORMAT="%{local}%{changes} [%{branch}]"
 export GIT_RADAR_COLOR_BRANCH=$GIT_COLOR
-RPROMPT='$(git-radar --zsh )'
+RPROMPT='$(git-radar --zsh)'
 
 # LS colors, made with http://geoff.greer.fm/lscolors/
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
