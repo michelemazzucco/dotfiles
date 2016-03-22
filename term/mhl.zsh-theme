@@ -4,8 +4,8 @@
 # Colors
 USER_COLOR=$FG[255]
 SUCCESS_COLOR=$FG[012]
-FAILURE_COLOR=$FG[001]
-GIT_COLOR=$FG[228]
+FAILURE_COLOR=$FG[009]
+GIT_COLOR=$FG[227]
 
 # Prompt
 PROMPT="%{$USER_COLOR%}%n%{$reset_color%}: %(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})%25<...<%~%<<%{$reset_color%} %(!.#.$) "
