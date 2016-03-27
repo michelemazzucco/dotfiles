@@ -21,6 +21,7 @@ alias ga="git add -A"
 alias gpl="git pull"
 alias gps="git push"
 alias wip="git add -A && git commit -m 'WIP'"
+alias gl="git log --all --graph --decorate"
 
 # Apache and MySQL aliases
 alias apache.start="sudo apachectl start"
