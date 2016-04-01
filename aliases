@@ -5,7 +5,7 @@ alias cl="clear"
 alias dot="cd ~/.dotfiles"
 alias pro="cd ~/projects"
 alias st="subl ."
-alias publickey="pbcopy < ~/.ssh/id_rsa.pub"
+alias pk="pbcopy < ~/.ssh/id_rsa.pub"
 alias l="ls -l"
 
 # Open files

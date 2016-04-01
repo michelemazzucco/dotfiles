@@ -19,7 +19,7 @@ set esckeys
 set hidden
 set history=1000 " Increase history from 20 default to 1000
 set mouse=a " Enable mouse
-set nowrap
+"set nowrap
 set nu " Enable line numbers
 set title
 set noshowmode
