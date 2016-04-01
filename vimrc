@@ -58,6 +58,9 @@ iabbrev aa λ
 " Plugins -------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
+" Utility
+Plug 'YankRing.vim'
+
 " Syntax
 Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'
