@@ -3,7 +3,7 @@
 .svn
 
 # Vim plugins
-vim/*.
+vim/.*
 vim/plugged
 vim/swaps
 vim/backups
