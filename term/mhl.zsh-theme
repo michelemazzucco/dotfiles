@@ -2,13 +2,14 @@
 # Path is autoshortened to ~25 characters
 
 # Colors
+USER_HOME=%{$USER_COLOR%}%n%{$reset_color%}:
 USER_COLOR=$FG[255]
 SUCCESS_COLOR=$FG[012]
 FAILURE_COLOR=$FG[009]
 GIT_COLOR=$FG[227]
 
 # Prompt
-PROMPT="%{$USER_COLOR%}%n%{$reset_color%}: %(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})%25<...<%~%<<%{$reset_color%} %(!.#.$) "
+PROMPT="$USER_HOME %(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})%25<...<%~%<<%{$reset_color%} %(!.#.$) "
 
 # Git radar format
 export GIT_RADAR_FORMAT="%{local}%{changes} [%{branch}]"
