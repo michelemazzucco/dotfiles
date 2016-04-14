@@ -10,10 +10,6 @@ alias l="ls -l"
 
 # Open files
 alias f="open ."
-alias ch="open -a google\ chrome"
-alias opera="open -a opera"
-alias safari="open -a safari"
-alias firefox="open -a firefox"
 
 # Git aliases
 alias gs="git status"
