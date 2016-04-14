@@ -82,10 +82,11 @@ fi
 # -----------------------------------------------------------------
 if type "rbenv" > /dev/null; then
     message "Installing Ruby with rbenv..."
-    # change ruby version if you want
+    # Change ruby version if you want
     rbenv install 2.2.4 && rbenv local 2.2.4 && rbenv rehash
-    # install gems
-    gem install sass && gem install jekyll && gem install bundle && gem install rails -v 4.2.4
+    # Install gems
+    message "Installing some gems..."
+    gem install sass && gem install jekyll && gem install bundle && gem install compass && gem install rails -v 4.2.4
     ok
 fi
 
