@@ -22,6 +22,7 @@ brew 'rbenv ruby-build'
 brew 'youtube-dl'
 brew 'vim --override-system-vi'
 brew 'openssl'
+brew 'reattach-to-user-namespace'
 
 # Shell
 brew 'zsh'
