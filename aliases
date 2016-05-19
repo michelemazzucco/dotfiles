@@ -15,8 +15,6 @@ alias f="open ."
 # Git aliases
 alias gs="git status"
 alias ga="git add -A"
-alias gpl="git pull"
-alias gps="git push"
 alias wip="git add -A && git commit -m 'WIP'"
 alias gl="git log --all --graph --decorate"
 
@@ -36,6 +34,10 @@ alias nig="npm install --global"
 alias nr="npm run"
 alias ns="npm start"
 alias nf="npm cache clean && rm -rf node_modules && npm install"
+
+# Tmux aliases
+alias tl="tmux list-sessions"
+alias ta="tmux attach -t"
 
 # Typos
 alias npm unistall="npm uninstall"
