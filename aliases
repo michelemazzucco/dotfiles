@@ -42,3 +42,4 @@ alias ta="tmux attach -t"
 # Typos
 alias npm unistall="npm uninstall"
 alias brew unistall="brew uninstall"
+alias eixt="exit"
