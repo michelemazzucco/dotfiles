@@ -1,32 +1,30 @@
+autoload colors && colors
+
+# Theme Colors
+ZSH_SUCCESS_COLOR=$FG[155]
+FAILURE_COLOR=$FG[009]
+USER_COLOR=$FG[255]
+GIT_COLOR=$FG[249]
+
 set_status() {
-  # Colors 
-  SUCCESS_COLOR=$FG[012]
-  FAILURE_COLOR=$FG[009]
-  echo "%(0?.%{$SUCCESS_COLOR%}.%{$FAILURE_COLOR%})"
+  echo "%(0?.%{$ZSH_SUCCESS_COLOR%}.%{$FAILURE_COLOR%})"
 }
 
 set_username() {
-  # Colors
-  USER_COLOR=$FG[255]
   echo "%{$USER_COLOR%}%n%{$reset_color%}:"
 }
 
-# Path is autoshortened to ~25 characters
+set_git_radar() {
+  # Customize Git radar format
+  export GIT_RADAR_FORMAT="%{remote}%{ :stash}%{ :changes}%{ :local} [%{branch}]"
+  export GIT_RADAR_COLOR_BRANCH=$GIT_COLOR
+  git-radar --zsh
+}
 
 set_prompt() {  
   # Clear prompt
   PROMPT=''
-  PROMPT="$(set_username) $(set_status)%25<...<%~%<<%{$reset_color%} %(!.#.$) "
-}
-
-set_git_radar() {
-  # Colors
-  GIT_COLOR=$FG[227]
-  
-  # Custom Git radar format
-  export GIT_RADAR_FORMAT="%{remote}%{ :stash}%{ :changes}%{ :local} [%{branch}]"
-  export GIT_RADAR_COLOR_BRANCH=$GIT_COLOR
-  git-radar --zsh
+  PROMPT="$(set_username) $(set_status)%30<...<%~%<<%{$reset_color%} %(!.#.$) "
 }
 
 set_rprompt() {
