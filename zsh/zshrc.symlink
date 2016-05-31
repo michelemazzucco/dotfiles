@@ -35,5 +35,5 @@ source $ZSH/oh-my-zsh.sh
 # -----------------------------------------------
 export DOTS=$HOME/.dotfiles
 
-typeset -U conf_files
-conf_files=($DOTS/**/*.zsh)
+source $DOTS/aliases.zsh
+source $DOTS/functions.zsh
