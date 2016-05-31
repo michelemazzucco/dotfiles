@@ -33,8 +33,9 @@ source $ZSH/oh-my-zsh.sh
 # -----------------------------------------------
 # Zsh files
 # -----------------------------------------------
-export DOTS=$HOME/.dotfiles
+export zsh_files=$HOME/.dotfiles/**/*.zsh
+for file in $zsh_files; 
+do 
+  source $file; 
+done
 
-source $DOTS/prompt.zsh
-source $DOTS/aliases.zsh
-source $DOTS/functions.zsh
