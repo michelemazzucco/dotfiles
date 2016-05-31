@@ -4,7 +4,7 @@ autoload colors && colors
 ZSH_SUCCESS_COLOR=$FG[155]
 FAILURE_COLOR=$FG[009]
 USER_COLOR=$FG[255]
-GIT_COLOR=$FG[249]
+GIT_COLOR=$FG[015]
 
 set_status() {
   echo "%(0?.%{$ZSH_SUCCESS_COLOR%}.%{$FAILURE_COLOR%})"
