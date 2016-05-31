@@ -35,5 +35,6 @@ source $ZSH/oh-my-zsh.sh
 # -----------------------------------------------
 export DOTS=$HOME/.dotfiles
 
+source $DOTS/prompt.zsh
 source $DOTS/aliases.zsh
 source $DOTS/functions.zsh
