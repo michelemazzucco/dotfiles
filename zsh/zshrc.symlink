@@ -31,11 +31,9 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # -----------------------------------------------
-# Source Aliases
+# Zsh files
 # -----------------------------------------------
-source $HOME/.aliases
+export DOTS=$HOME/.dotfiles
 
-# -----------------------------------------------
-# Source functions
-# -----------------------------------------------
-source $HOME/.functions 
+typeset -U conf_files
+conf_files=($DOTS/**/*.zsh)
