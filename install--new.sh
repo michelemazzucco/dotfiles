@@ -19,11 +19,11 @@ error() {
   printf "$RED$*\n"
 }
 
-ok() {
+all_ok() {
   printf "$GREEN...done!\n\n"
 }
 
-# All
-brew_clean() {
-  brew update && brew upgrade && brew cleanup && brew cask cleanup
-}
+find . -name install--test.sh | while read installer;
+  do ./"${installer}"
+  all_ok
+done
