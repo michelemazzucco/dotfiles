@@ -22,9 +22,9 @@ alias gl="git log --all --graph --decorate"
 alias apache.start="sudo apachectl start"
 alias apache.stop="sudo apachectl stop"
 alias apache.restart="sudo apachectl restart"
-alias mysql.start="mysql.server start"
-alias mysql.stop="mysql.server stop"
-alias mysql.restart="mysql.server stop && mysql.server start"
+alias mysql.start="brew services start mysql"
+alias mysql.stop="brew services stop mysql"
+alias mysql.restart="brew services restart mysql"
 
 # Npm aliases
 alias ni="npm install"

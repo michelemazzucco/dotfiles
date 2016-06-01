@@ -8,6 +8,7 @@ cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
+tap 'homebrew/services'
 tap 'homebrew/homebrew-php'
 
 # Some usefull packages
