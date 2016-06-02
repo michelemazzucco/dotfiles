@@ -45,26 +45,26 @@ exit
 # -----------------------------------------------------------------
 
 # Install Homebrew
-if type "brew" > /dev/null; then
-  message "Homebrew found. Let's Go!"
-else
-  message "Homebrew not found. Installing..."
-  echo "`ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"`"
-  ok
-fi
-
-# Install Brew bundle
-if printf "brew bundle"  > /dev/null; then
-  message "Brew bundle found."
-  brew bundle
-  brew_clean
-else
-  message "Homebrew not found. Installing..."
-  brew tap Homebrew/bundle
-  brew bundle
-  brew_clean
-fi
-ok
+# if type "brew" > /dev/null; then
+#   message "Homebrew found. Let's Go!"
+# else
+#   message "Homebrew not found. Installing..."
+#   echo "`ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"`"
+#   ok
+# fi
+# 
+# # Install Brew bundle
+# if printf "brew bundle"  > /dev/null; then
+#   message "Brew bundle found."
+#   brew bundle
+#   brew_clean
+# else
+#   message "Homebrew not found. Installing..."
+#   brew tap Homebrew/bundle
+#   brew bundle
+#   brew_clean
+# fi
+# ok
 
 # After El Captin update use it
 # brew link openssl --force
@@ -72,32 +72,32 @@ ok
 # -----------------------------------------------------------------
 # npm packages
 # -----------------------------------------------------------------
-if type "npm" > /dev/null; then
-    message "Installing npm packages..."
-    npm install --global gulp bower speed-test nodemon
-    ok
-fi
+# if type "npm" > /dev/null; then
+#     message "Installing npm packages..."
+#     npm install --global gulp bower speed-test nodemon
+#     ok
+# fi
 
 # -----------------------------------------------------------------
 # Install Ruby gems
 # -----------------------------------------------------------------
-if type "rbenv" > /dev/null; then
-    message "Installing Ruby with rbenv..."
-    # Change ruby version if you want
-    rbenv install 2.2.4 && rbenv local 2.2.4 && rbenv rehash
-    # Install gems
-    message "Installing some gems..."
-    gem install sass && gem install jekyll && gem install bundle && gem install compass && gem install rails -v 4.2.4
-    ok
-fi
-
-# -----------------------------------------------------------------
-# Install Pow
-# -----------------------------------------------------------------
-if [ ! -d "$dest/.pow" ]; then
-  message "Installing Pow..."
-  curl get.pow.cx | sh
-fi
+# if type "rbenv" > /dev/null; then
+#     message "Installing Ruby with rbenv..."
+#     # Change ruby version if you want
+#     rbenv install 2.2.4 && rbenv local 2.2.4 && rbenv rehash
+#     # Install gems
+#     message "Installing some gems..."
+#     gem install sass && gem install jekyll && gem install bundle && gem install compass && gem install rails -v 4.2.4
+#     ok
+# fi
+# 
+# # -----------------------------------------------------------------
+# # Install Pow
+# # -----------------------------------------------------------------
+# if [ ! -d "$dest/.pow" ]; then
+#   message "Installing Pow..."
+#   curl get.pow.cx | sh
+# fi
 
 # -----------------------------------------------------------------
 # Shell
@@ -117,10 +117,10 @@ if [ ! -d "$dest/.oh-my-zsh" ]; then
   ok
 fi
 
-if [ -d "$dest/.oh-my-zsh" ]; then
-  mkdir -p $dest/.oh-my-zsh/custom/themes
-  ln -s $dir/term/mhl.zsh-theme $dest/.oh-my-zsh/custom/themes
-fi
+# if [ -d "$dest/.oh-my-zsh" ]; then
+#   mkdir -p $dest/.oh-my-zsh/custom/themes
+#   ln -s $dir/term/mhl.zsh-theme $dest/.oh-my-zsh/custom/themes
+# fi
 
 # -----------------------------------------------------------------
 # Vim

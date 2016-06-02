@@ -1,3 +1,7 @@
+#!/bin/bash
+#
+# Use Ruby with rbenv and install some gems.
+
 if type "rbenv" > /dev/null; then
   echo "Installing Ruby with rbenv..."
   # Change ruby version if you want

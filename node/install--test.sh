@@ -2,4 +2,6 @@
 #
 # Install global packages
 
-echo "hi!"
+me=`whoami`
+
+echo "$me"
