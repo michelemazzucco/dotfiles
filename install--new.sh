@@ -1,17 +1,9 @@
 #!/bin/bash
 # -----------------------------------------------------------------
-# Vars & colors
-# -----------------------------------------------------------------
-export RED="\e[0;31m"
-export GREEN="\e[0;32m"
-export YELLOW="\e[1;33m"
-export BLUE="\e[0;34m"
-
-# -----------------------------------------------------------------
 # Functions
 # -----------------------------------------------------------------
 message() {
-  printf "$BLUE$*\n"
+  printf "\r\033[00;34m>>>\033[0m $1\n"
 }
 
 error() {
@@ -19,10 +11,21 @@ error() {
 }
 
 all_ok() {
-  printf "$GREEN...done!\n\n"
+  printf "\r\033[2K\033[00;32mDone!\033[0m$1\n"
 }
 
 find . -name install--test.sh | while read installer;
   do ./"${installer}"
   all_ok
 done
+
+if [ "`uname`" == "Darwin" ]; then
+  read -r -p "Are you sure to install my OSX configuration? [y/N] " resp
+  case $resp in
+      [yY]) 
+          ./node/install--test.sh;;
+      *)
+        message 'Ok, no problem!'
+        exit;;
+  esac
+fi
