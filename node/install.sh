@@ -7,6 +7,6 @@ if type "npm" > /dev/null; then
     gulp \
     bower \
     speed-test \
-    vue-cli \
+    broccoli-cli \
     postcss-debug 
 fi
