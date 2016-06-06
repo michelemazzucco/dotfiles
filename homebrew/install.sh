@@ -2,6 +2,7 @@
 #
 # Install Homebrew and packages with Brew bundle.
 
+# Brew hard cleanup
 brew_clean() {
   brew update && brew upgrade && brew cleanup
 }
