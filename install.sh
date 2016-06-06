@@ -9,6 +9,7 @@ source ./scripts/setup.sh
 run_installers() {
   find . -mindepth 2 -name 'install.sh' | while read installer; do 
     #./"${installer}"
+    message "Run ${installer}..."
     echo "${installer}"
     all_ok
   done
@@ -16,14 +17,14 @@ run_installers() {
 
 # OSX config
 setup_osx_conf() {
-  if [ "`uname`" == "Darwin" ]; then
+  if [[ `uname` == "Darwin" ]]; then
     read -r -p "Are you sure to install my OSX configuration? [y/N] " resp
     case $resp in
       [yY]) 
         ./node/install--test.sh 
         ;;
       *)
-        message 'Ok, no problem!'
+        message "Ok, no problem!"
         exit
         ;;
     esac
@@ -32,3 +33,7 @@ setup_osx_conf() {
 
 run_installers
 setup_osx_conf
+
+# Switch to Zsh
+message "Switch to Zsh..."
+chsh -s /bin/zsh
