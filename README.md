@@ -1,5 +1,3 @@
-# Dotfiles
+# Dotfiles **[atm very WIP]**
 
-A "designer's approach" to dotfiles.
-
-*[very WIP]*
+My dotfiles, nothing special.
