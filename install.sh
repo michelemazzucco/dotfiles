@@ -21,7 +21,7 @@ setup_osx_conf() {
     read -r -p "Are you sure to install my OSX configuration? [y/N] " resp
     case $resp in
       [yY]) 
-        ./node/install--test.sh 
+        echo "./scripts/osx.sh"
         ;;
       *)
         message "Ok, no problem!"
