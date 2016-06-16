@@ -2,4 +2,4 @@
 
 A "designer's approach" to dotfiles.
 
-[very WIP]
+*[very WIP]*
