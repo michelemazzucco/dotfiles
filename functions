@@ -25,7 +25,7 @@ compdef '_files -W "$HOME/projects"' p
 # -----------------------------------------------------------------
 # Add notes to my folder
 # -----------------------------------------------------------------
-function notes() {
+function note() {
   today=`date +%F`
   base_url="$HOME/projects/my-notes"
   prv="$base_url/private"
