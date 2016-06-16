@@ -63,6 +63,9 @@ copy_fonts() {
   fi
 }
 
+# TODO - Sublime text preferences
+# TODO - bin folder
+
 symlink_files
 # setup_oh_my_zsh
 # setup_vim_folder
