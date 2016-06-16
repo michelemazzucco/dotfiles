@@ -19,12 +19,6 @@ all_ok() {
   printf "\r\033[2K\033[00;32m✓ Done!\033[0m$1\n\n"
 }
 
-echo "******************************"
-echo $DOTS;
-echo $DEST;
-echo "******************************"
-all_ok
-
 # Symlink all files in Home
 symlink_files() {
   message "Symlink all dots in your home folder..."
@@ -47,20 +41,29 @@ setup_oh_my_zsh() {
 setup_vim_folder() {
   message "Setup Vim folder..."
   if [[ -d "$HOME/.vim" ]]; then
-    ln -s $dir/vim $HOME/.vim
+    ln -s $DOTS/vim $DEST/.vim
   else
-    rm -rf $dest/.vim
-    ln -s $dir/vim $HOME/.vim
+    rm -rf $DEST/.vim
+    ln -s $DOTS/vim $DEST/.vim
   fi
 
-  mkdir -p $HOME/.vim/undo \
-    $HOME/.vim/swaps \
-    $HOME/.vim/backups
+  # Create vim folders
+  mkdir -p $DEST/.vim/undo \
+    $DEST/.vim/swaps \
+    $DEST/.vim/backups
   all_ok
+}
+
+# Copy fav fonts into system fonts folder 
+copy_fonts() {
+  if [ -d "$DEST/Library/Fonts" ]; then
+    message "Copying fonts in your Library Fonts folder..."
+    cp -rf $DOTS/fonts/* $DEST/Library/Fonts
+    all_ok
+  fi
 }
 
 symlink_files
 # setup_oh_my_zsh
 # setup_vim_folder
-echo "-------------"
-
+# copy_fonts

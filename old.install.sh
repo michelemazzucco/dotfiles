@@ -104,18 +104,18 @@ exit
 # -----------------------------------------------------------------
 
 # Set Zsh as Default shell
-if [[ ! `echo $SHELL` == "/bin/zsh" ]]; then
-  message "Set Zsh as default shell..."
-  chsh -s /bin/zsh
-  ok
-fi
-
-# Install Oh my zsh if doesn't exist
-if [ ! -d "$dest/.oh-my-zsh" ]; then
-  message "Installing Oh My Zsh..."
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  ok
-fi
+# if [[ ! `echo $SHELL` == "/bin/zsh" ]]; then
+#   message "Set Zsh as default shell..."
+#   chsh -s /bin/zsh
+#   ok
+# fi
+# 
+# # Install Oh my zsh if doesn't exist
+# if [ ! -d "$dest/.oh-my-zsh" ]; then
+#   message "Installing Oh My Zsh..."
+#   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#   ok
+# fi
 
 # if [ -d "$dest/.oh-my-zsh" ]; then
 #   mkdir -p $dest/.oh-my-zsh/custom/themes
@@ -125,14 +125,14 @@ fi
 # -----------------------------------------------------------------
 # Vim
 # -----------------------------------------------------------------
-if [ -d "$dest/.vim" ]; then
-  ln -s $dir/vim $dest/.vim
-else
-  rm -rf $dest/.vim
-  ln -s $dir/vim $dest/.vim
-fi
+#if [ -d "$dest/.vim" ]; then
+#  ln -s $dir/vim $dest/.vim
+#else
+#  rm -rf $dest/.vim
+#  ln -s $dir/vim $dest/.vim
+#fi
 
-mkdir $dest/.vim/undo $dest/.vim/swaps $dest/.vim/backups
+# mkdir $dest/.vim/undo $dest/.vim/swaps $dest/.vim/backups
 
 # -----------------------------------------------------------------
 # bin folder
@@ -147,11 +147,11 @@ fi
 # -----------------------------------------------------------------
 # Fonts
 # -----------------------------------------------------------------
-if [ -d "$dest/Library/Fonts" ]; then
-  message "Copying fonts in your Library Fonts folder..."
-  cp -rf $dir/fonts/* $dest/Library/Fonts
-  ok
-fi
+# if [ -d "$dest/Library/Fonts" ]; then
+#   message "Copying fonts in your Library Fonts folder..."
+#   cp -rf $dir/fonts/* $dest/Library/Fonts
+#   ok
+# fi
 
 # -----------------------------------------------------------------
 # Sublime Configuration
