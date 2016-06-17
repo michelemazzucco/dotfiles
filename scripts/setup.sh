@@ -54,11 +54,12 @@ setup_vim_folder() {
   all_ok
 }
 
-# Create bin folder and symlink content
+# Create bin folder and copy content
 setup_bin_folder() {
   mkdir -p $DEST/bin
   for file in $DOTS/bin/*; do
     echo "$file"
+    # cp 
   done
 }
 

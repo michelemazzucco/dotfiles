@@ -8,16 +8,22 @@ plugins=(history git git-extras node npm brew osx)
 # General conf
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$HOME/bin"
+
 export EDITOR="vim"
 
+# Rbenv
 if which rbenv &> /dev/null; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
+# Brew
+if which brew &> /dev/null; then
+  export PATH="/usr/local/sbin:$PATH"
+fi
+
 # Zsh files
 export "DOTS=$HOME/.dotfiles"
-for file in $DOTS/**/*.zsh; 
-do 
+for file in $DOTS/**/*.zsh; do 
   source "$file"; 
 done
