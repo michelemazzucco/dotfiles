@@ -2,8 +2,8 @@
 #
 # Main script.
 
-# Import general setup
-source ./scripts/setup.sh
+# General setup
+source './scripts/setup.sh'
 
 # Run all installers
 run_installers() {
@@ -17,15 +17,14 @@ run_installers() {
 
 # OSX config
 setup_osx_conf() {
-  if [[ `uname` == "Darwin" ]]; then
-    read -r -p "Are you sure to install my OSX configuration? [y/N] " resp
+  if [[ `uname` == 'Darwin' ]]; then
+    read -r -p 'Are you sure to install my OSX configuration? [y/N] ' resp
     case $resp in
       [yY]) 
-        echo "./scripts/osx.sh" # TODO
+        echo './scripts/osx.sh' # TODO
         ;;
       *)
-        message "Ok, no problem!"
-        exit
+        message 'Ok, no problem!\n'
         ;;
     esac
   fi
@@ -35,5 +34,5 @@ run_installers
 setup_osx_conf
 
 # Switch to Zsh
-message "Switch to Zsh..."
+message 'Switch to Zsh...'
 chsh -s /bin/zsh

@@ -2,43 +2,43 @@
 # -----------------------------------------------------------------
 # Import utils
 # -----------------------------------------------------------------
-source ./utils.sh
+# source ./utils.sh
 
 # -----------------------------------------------------------------
 # Check dest dir is provided
 # -----------------------------------------------------------------
-if [ -z "$1" ]; then
-  error "Please provide dest dir, i.e. 'install.sh ~' OR 'install.sh $HOME' OR 'install.sh ./test'";
-  exit
-else
-  dest=$1
-  mkdir -p $dest #creating dest dir if not exists
-  message "Symlinking dotfiles in '$1'...";
-fi
+# if [ -z "$1" ]; then
+#   error "Please provide dest dir, i.e. 'install.sh ~' OR 'install.sh $HOME' OR 'install.sh ./test'";
+#   exit
+# else
+#   dest=$1
+#   mkdir -p $dest #creating dest dir if not exists
+#   message "Symlinking dotfiles in '$1'...";
+# fi
 
 # -----------------------------------------------------------------
 # Variables
 # -----------------------------------------------------------------
-dir=$(pwd) # reading dir from current directory
-now=`date +%Y-%m-%d-%H:%M:%S`
+# dir=$(pwd) # reading dir from current directory
+# now=`date +%Y-%m-%d-%H:%M:%S`
 
 # -----------------------------------------------------------------
 # Create symlink and create files in homedir from .dotfiles folder
 # -----------------------------------------------------------------
-file_paths=$dir/*
-file_name_excluded="install.sh fonts iterm sublime Brewfile osx README.md utils.sh tmux.conf"
-message "Remove old files and create new files symlinked..."
-for file_path in $file_paths
-do
-  file_name="${file_path##*/}"  # get filename
-  if ! [[ $file_name_excluded =~ $file_name ]]; then # check path is not excluded
-    message "Processing $file_name..."
-    rm -rf $dest/.$file_name
-    ln -s $file_path $dest/.$file_name
-    ok
-  fi
-done
-exit
+# file_paths=$dir/*
+# file_name_excluded="install.sh fonts iterm sublime Brewfile osx README.md utils.sh tmux.conf"
+# message "Remove old files and create new files symlinked..."
+# for file_path in $file_paths
+# do
+#   file_name="${file_path##*/}"  # get filename
+#   if ! [[ $file_name_excluded =~ $file_name ]]; then # check path is not excluded
+#     message "Processing $file_name..."
+#     rm -rf $dest/.$file_name
+#     ln -s $file_path $dest/.$file_name
+#     ok
+#   fi
+# done
+# exit
 
 # -----------------------------------------------------------------
 # Homebrew

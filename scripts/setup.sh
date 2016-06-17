@@ -8,7 +8,7 @@ DEST=$HOME
 
 # Functions for messages and errors
 message() {
-  printf "\r\033[00;34m>>>\033[0m $1\n"
+  printf '\r\033[00;34m>>>\033[0m $1\n'
 }
 
 error() {
@@ -16,14 +16,14 @@ error() {
 }
 
 all_ok() {
-  printf "\r\033[2K\033[00;32m✓ Done!\033[0m$1\n\n"
+  printf '\r\033[2K\033[00;32m✓ Done!\033[0m$1\n\n'
 }
 
 # Symlink all files in Home
 symlink_files() {
-  message "Symlink all dots in your home folder..."
+  message 'Symlink all dots in your home folder...'
   for file in $(find -H "$DOTS" -maxdepth 2 -name '*.symlink'); do
-    echo $file;
+    echo "$file";
   done
   all_ok
 }
@@ -31,7 +31,7 @@ symlink_files() {
 # Install Oh My Zsh
 setup_oh_my_zsh() {
   if [[ ! -d "$DEST/.oh-my-zsh" ]]; then
-    message "Installing Oh My Zsh..."
+    message 'Installing Oh My Zsh...'
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     all_ok
   fi
@@ -39,26 +39,26 @@ setup_oh_my_zsh() {
 
 # Symlink vim folder and creates its subdirectories
 setup_vim_folder() {
-  message "Setup Vim folder..."
+  message 'Setup Vim folder...'
   if [[ -d "$HOME/.vim" ]]; then
-    ln -s $DOTS/vim $DEST/.vim
+    ln -s "$DOTS/vim" "$DEST/.vim"
   else
-    rm -rf $DEST/.vim
-    ln -s $DOTS/vim $DEST/.vim
+    rm -rf "$DEST/.vim"
+    ln -s "$DOTS/vim" "$DEST/.vim"
   fi
 
   # Create vim folders
-  mkdir -p $DEST/.vim/undo \
-    $DEST/.vim/swaps \
-    $DEST/.vim/backups
+  mkdir -p "$DEST/.vim/undo" \
+    "$DEST/.vim/swaps" \
+    "$DEST/.vim/backups"
   all_ok
 }
 
 # Copy fav fonts into system fonts folder 
 copy_fonts() {
   if [ -d "$DEST/Library/Fonts" ]; then
-    message "Copying fonts in your Library Fonts folder..."
-    cp -rf $DOTS/fonts/* $DEST/Library/Fonts
+    message 'Copying fonts in your Library Fonts folder...'
+    cp -rf "$DOTS/fonts/*" "$DEST/Library/Fonts"
     all_ok
   fi
 }
