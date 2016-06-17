@@ -5,12 +5,8 @@ alias cl="clear"
 alias dot="cd ~/.dotfiles"
 alias pro="cd ~/projects"
 alias st="subl ."
-alias pk="pbcopy < ~/.ssh/id_rsa.pub"
 alias publickey="pbcopy < ~/.ssh/id_rsa.pub"
 alias l="ls -l"
-
-# Open files
-alias f="open ."
 
 # Git aliases
 alias gs="git status"

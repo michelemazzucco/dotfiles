@@ -137,12 +137,12 @@
 # -----------------------------------------------------------------
 # bin folder
 # -----------------------------------------------------------------
-if [ -d "$dest/bin" ]; then
-  ln -s $dir/bin/* $dest/bin/
-else
-  mkdir $dest/bin/
-  ln -s $dir/bin/* $dest/bin/
-fi
+# if [ -d "$dest/bin" ]; then
+#   ln -s $dir/bin/* $dest/bin/
+# else
+#   mkdir $dest/bin/
+#   ln -s $dir/bin/* $dest/bin/
+# fi
 
 # -----------------------------------------------------------------
 # Fonts

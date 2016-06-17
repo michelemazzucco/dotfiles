@@ -8,7 +8,7 @@ DEST=$HOME
 
 # Functions for messages and errors
 message() {
-  printf '\r\033[00;34m>>>\033[0m $1\n'
+  printf "\r\033[00;34m>>>\033[0m $1\n"
 }
 
 error() {
@@ -16,7 +16,7 @@ error() {
 }
 
 all_ok() {
-  printf '\r\033[2K\033[00;32m✓ Done!\033[0m$1\n\n'
+  printf "\r\033[2K\033[00;32m✓ Done!\033[0m$1\n\n"
 }
 
 # Symlink all files in Home
@@ -54,11 +54,19 @@ setup_vim_folder() {
   all_ok
 }
 
+# Create bin folder and symlink content
+setup_bin_folder() {
+  mkdir -p $DEST/bin
+  for file in $DOTS/bin/*; do
+    echo "$file"
+  done
+}
+
 # Copy fav fonts into system fonts folder 
 copy_fonts() {
   if [ -d "$DEST/Library/Fonts" ]; then
     message 'Copying fonts in your Library Fonts folder...'
-    cp -rf "$DOTS/fonts/*" "$DEST/Library/Fonts"
+    cp -rf $DOTS/fonts/* "$DEST/Library/Fonts"
     all_ok
   fi
 }
@@ -69,4 +77,5 @@ copy_fonts() {
 symlink_files
 # setup_oh_my_zsh
 # setup_vim_folder
+# setup_bin_folder
 # copy_fonts
