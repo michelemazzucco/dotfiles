@@ -30,10 +30,6 @@ setup_osx_conf() {
   fi
 }
 
-if type "brew" > /dev/null; then
-  echo "Homebrew found. Let's Go!"
-fi
-
 run_installers
 setup_osx_conf
 
