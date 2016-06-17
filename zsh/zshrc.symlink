@@ -1,36 +1,24 @@
-# -----------------------------------------------
-# Path to your oh-my-zsh installation.
-# -----------------------------------------------
+# Oh my Zsh
 export ZSH=/Users/michele/.oh-my-zsh
+source "$ZSH/oh-my-zsh.sh"
 
-# -----------------------------------------------
 # Plugins
-# -----------------------------------------------
 plugins=(history git git-extras node npm brew osx)
 
-# -----------------------------------------------
-# General
-# -----------------------------------------------
+# General conf
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$HOME/bin"
-export EDITOR="vim" # Use Vim
+export EDITOR="vim"
 
 if which rbenv &> /dev/null; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
-# -----------------------------------------------
-# Source Oh my zsh
-# -----------------------------------------------
-source $ZSH/oh-my-zsh.sh
-
-# -----------------------------------------------
 # Zsh files
-# -----------------------------------------------
-export DOTS=$HOME/.dotfiles
+export "DOTS=$HOME/.dotfiles"
 for file in $DOTS/**/*.zsh; 
 do 
-  source $file; 
+  source "$file"; 
 done
 
