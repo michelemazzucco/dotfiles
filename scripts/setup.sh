@@ -54,29 +54,44 @@ setup_vim_folder() {
   all_ok
 }
 
-# Create bin folder and copy content
+# Create bin folder and symlink content
 setup_bin_folder() {
+  message 'Setup bin folder and copy the files..'
   mkdir -p $DEST/bin
   for file in $DOTS/bin/*; do
     echo "$file"
-    # cp 
+    # TODO
   done
+  all_ok
 }
 
 # Copy fav fonts into system fonts folder 
 copy_fonts() {
   if [ -d "$DEST/Library/Fonts" ]; then
     message 'Copying fonts in your Library Fonts folder...'
-    cp -rf $DOTS/fonts/* "$DEST/Library/Fonts"
+    for file in $DOTS/fonts/*; do
+      cp -rf $file "$DEST/Library/Fonts"
+    done
     all_ok
   fi
 }
 
-# TODO - Sublime text preferences
-# TODO - bin folder
+setup_subl() {
+  PREF=Preferences.sublime-settings
+  PACK=Package\ Control.sublime-settings
+  SUBL=$DEST/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+  
+  cp "$SUBL"{"$PREF", "$PACK"} "$HOME/Desktop/test" # TODO - Test
+}
 
-symlink_files
-# setup_oh_my_zsh
-# setup_vim_folder
-# setup_bin_folder
-# copy_fonts
+# Main function - wrap all things
+main() {
+  # symlink_files
+  # setup_oh_my_zsh
+  # setup_vim_folder
+  # setup_bin_folder
+  setup_subl
+  # copy_fonts
+}
+
+main "$@"
