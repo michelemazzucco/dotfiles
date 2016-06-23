@@ -60,8 +60,10 @@ call plug#begin('~/.vim/plugged')
 
 " Utility
 Plug 'YankRing.vim'
+Plug 'ervandew/supertab'
 
 " Syntax
+Plug 'pangloss/vim-javascript'
 Plug 'JulesWang/css.vim'
 Plug 'cakebaker/scss-syntax.vim'
 
