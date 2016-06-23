@@ -23,7 +23,8 @@ all_ok() {
 symlink_files() {
   message 'Symlink all dots in your home folder...'
   for file in $(find -H "$DOTS" -maxdepth 2 -name '*.symlink'); do
-    echo "$file"; # TODO
+    # TODO - Create a backup copy before overide
+    ln -sfn "$file" "$DEST/.$(basename "${file%.*}")"
   done
   all_ok
 }
@@ -59,7 +60,7 @@ setup_bin_folder() {
   message 'Setup bin folder and copy the files..'
   mkdir -p $DEST/bin
   for file in $DOTS/bin/*; do
-    echo "$file" # TODO
+    ln -sfn "$file" "$DEST/bin/"
   done
   all_ok
 }
