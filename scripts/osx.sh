@@ -7,7 +7,9 @@
 sudo -v
 
 # Keep it alive
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do 
+  sudo -n true; sleep 60; kill -0 "$$" || exit; 
+done 2>/dev/null &
 
 
 # -----------------------------------------------
@@ -106,4 +108,5 @@ for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
 	"Transmission" "Tweetbot" "Twitter" "iCal" "Sketch"; do
 	killall "${app}" &> /dev/null
 done
+
 echo "Done! Some of these changes require a restart to take effect."
