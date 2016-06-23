@@ -77,11 +77,11 @@ copy_fonts() {
 }
 
 setup_subl() {
-  PREF=Preferences.sublime-settings
   PACK=Package\ Control.sublime-settings
-  SUBL=$DEST/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+  PREF=Preferences.sublime-settings
+  SUBL="$DEST/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"
   
-  cp "$SUBL"{"$PREF", "$PACK"} "$HOME/Desktop/test" # TODO - Test
+  ln -sfn "$DOTS/sublime/"{"$PACK","$PREF"} "$SUBL"
 }
 
 # Main function - wrap all things
