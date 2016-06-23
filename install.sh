@@ -3,7 +3,7 @@
 # Main script.
 
 # General setup
-source './scripts/setup.sh'
+# source './scripts/setup.sh'
 
 # Run all installers
 run_installers() {

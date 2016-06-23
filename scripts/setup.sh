@@ -86,12 +86,12 @@ setup_subl() {
 
 # Main function - wrap all things
 main() {
-  # symlink_files
-  # setup_oh_my_zsh
-  # setup_vim_folder
-  # setup_bin_folder
+  symlink_files
+  setup_oh_my_zsh
+  setup_vim_folder
+  setup_bin_folder
   setup_subl
-  # copy_fonts
+  copy_fonts
 }
 
 main "$@"
