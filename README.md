@@ -1,3 +1,2 @@
-# Dotfiles **[atm very WIP]**
-
+# Dotfiles
 My dotfiles, nothing special.
