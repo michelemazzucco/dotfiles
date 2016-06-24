@@ -23,7 +23,7 @@ all_ok() {
 symlink_files() {
   message 'Symlink all dots in your home folder...'
   for file in $(find -H "$DOTS" -maxdepth 2 -name '*.symlink'); do
-    # TODO - Create a backup copy before overide
+    # TODO - Create a backup copy before override
     ln -sfn "$file" "$DEST/.$(basename "${file%.*}")"
   done
   all_ok
