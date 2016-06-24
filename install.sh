@@ -3,14 +3,13 @@
 # Main script.
 
 # General setup
-# source './scripts/setup.sh'
+source './scripts/setup.sh'
 
 # Run all installers
 run_installers() {
-  find . -mindepth 2 -name 'install.sh' | while read installer; do 
-    #./"${installer}"
+  find . -mindepth 2 -name 'install--test.sh' | while read installer; do 
     message "Run ${installer}..."
-    echo "${installer}" # TODO
+    ./"${installer}"
     all_ok
   done
 }
@@ -21,7 +20,7 @@ setup_osx_conf() {
     read -r -p 'Are you sure to install my OSX configuration? [y/N] ' resp
     case $resp in
       [yY]) 
-        echo './scripts/osx.sh' # TODO
+        "./scripts/osx.sh"
         ;;
       *)
         message 'Ok, no problem!\n'
