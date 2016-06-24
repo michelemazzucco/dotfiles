@@ -8,7 +8,6 @@ plugins=(history git git-extras node npm brew osx)
 # General conf
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$HOME/bin"
-
 export EDITOR="vim"
 
 # Rbenv
