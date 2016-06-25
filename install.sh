@@ -7,7 +7,7 @@ source './scripts/setup.sh'
 
 # Run all installers
 run_installers() {
-  find . -mindepth 2 -name 'install--test.sh' | while read installer; do 
+  find . -mindepth 2 -name 'install.sh' | while read installer; do 
     message "Run ${installer}..."
     ./"${installer}"
     all_ok
