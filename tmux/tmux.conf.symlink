@@ -21,7 +21,9 @@ setw -g window-status-current-attr bright
 
 # Panes
 set -g pane-border-fg colour240
-set -g pane-active-border-fg colour015
+set -g pane-border-bg colour235
+set -g pane-active-border-fg colour220
+set -g pane-active-border-bg colour235
 
 # Easier splits
 bind | split-window -h
@@ -34,6 +36,11 @@ set -g status-fg colour248
 
 # Stop autorename windows
 set-option -g allow-rename off
+
+# Current window status bar style
+setw -g window-status-current-bg colour236
+setw -g window-status-current-format ' #I#[fg=colour254]:#[fg=colour255]#W#[fg=colour220]#F '
+setw -g window-status-current-attr bold
 
 # -----------------------------------------------
 # OSX only
