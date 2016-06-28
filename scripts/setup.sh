@@ -55,6 +55,8 @@ setup_vim_folder() {
   all_ok
 }
 
+# TODO - symlink of Tmux folder in your home
+
 # Create bin folder and symlink content
 setup_bin_folder() {
   message 'Setup bin folder and copy the files..'
@@ -65,7 +67,7 @@ setup_bin_folder() {
   all_ok
 }
 
-# Copy fav fonts into system fonts folder 
+# Copy fav fonts into system fonts folder
 copy_fonts() {
   if [ -d "$DEST/Library/Fonts" ]; then
     message 'Copying fonts in your Library Fonts folder...'
@@ -80,7 +82,7 @@ setup_subl() {
   PACK=Package\ Control.sublime-settings
   PREF=Preferences.sublime-settings
   SUBL="$DEST/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"
-  
+
   ln -sfn "$DOTS/sublime/"{"$PACK","$PREF"} "$SUBL"
 }
 
