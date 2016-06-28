@@ -43,6 +43,11 @@ setw -g window-status-current-format ' #I#[fg=colour254]:#[fg=colour255]#W#[fg=c
 setw -g window-status-current-attr bold
 
 # -----------------------------------------------
+# Plugins
+# -----------------------------------------------
+set -g @plugin 'tmux-plugins/tpm'
+
+# -----------------------------------------------
 # OSX only
 # -----------------------------------------------
 
