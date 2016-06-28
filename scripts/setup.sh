@@ -41,7 +41,7 @@ setup_oh_my_zsh() {
 # Symlink vim folder and creates its subdirectories
 setup_vim_folder() {
   message 'Setup Vim folder...'
-  if [[ -d "$HOME/.vim" ]]; then
+  if [[ -d "$DEST/.vim" ]]; then
     ln -s "$DOTS/vim" "$DEST/.vim"
   else
     rm -rf "$DEST/.vim"
