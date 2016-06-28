@@ -8,3 +8,7 @@ vim/plugged
 vim/swaps
 vim/backups
 vim/undo
+
+# Tmux
+tmux/plugins
+!tmux/plugins/tpm
