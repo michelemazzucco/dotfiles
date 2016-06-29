@@ -10,5 +10,6 @@ vim/backups
 vim/undo
 
 # Tmux
-tmux/plugins
+tmux/*
 !tmux/plugins/tpm
+!tmux/tmux.conf.symlink
