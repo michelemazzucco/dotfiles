@@ -29,7 +29,7 @@ setup_osx_conf() {
   fi
 }
 
-run_installers
+# run_installers
 setup_osx_conf
 
 # Switch to Zsh

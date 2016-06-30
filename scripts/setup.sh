@@ -2,22 +2,8 @@
 #
 # Setup all the things.
 
-# Vars
-DOTS=$(pwd)
-DEST=$HOME
-
-# Functions for messages and errors
-message() {
-  printf "\r\033[00;34m>>>\033[0m $1\n"
-}
-
-error() {
-  printf "$RED$*\n"
-}
-
-all_ok() {
-  printf "\r\033[2K\033[00;32m✓ Done!\033[0m$1\n\n"
-}
+# Import config
+source './scripts/config.sh'
 
 # Symlink all files in Home
 symlink_files() {
@@ -27,15 +13,6 @@ symlink_files() {
     ln -sfn "$file" "$DEST/.$(basename "${file%.*}")"
   done
   all_ok
-}
-
-# Install Oh My Zsh
-setup_oh_my_zsh() {
-  if [[ ! -d "$DEST/.oh-my-zsh" ]]; then
-    message 'Installing Oh My Zsh...'
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    all_ok
-  fi
 }
 
 # Symlink vim folder and creates its subdirectories
@@ -78,21 +55,11 @@ copy_fonts() {
   fi
 }
 
-setup_subl() {
-  PACK=Package\ Control.sublime-settings
-  PREF=Preferences.sublime-settings
-  SUBL="$DEST/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"
-
-  ln -sfn "$DOTS/sublime/"{"$PACK","$PREF"} "$SUBL"
-}
-
 # Main function - wrap all things
 main() {
   symlink_files
-  setup_oh_my_zsh
   setup_vim_folder
   setup_bin_folder
-  setup_subl
   copy_fonts
 }
 
