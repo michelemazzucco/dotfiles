@@ -5,13 +5,13 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
 		"Color Highlighter",
 		"EditorConfig",
 		"Emmet",
 		"Git",
 		"GitGutter",
 		"Jade",
-		"JSX",
 		"Markdown Preview",
 		"Material Theme",
 		"Package Control",
