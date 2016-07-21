@@ -1,12 +1,15 @@
 # General
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cl="clear"
 alias dot="cd ~/.dotfiles"
 alias pro="cd ~/projects"
-alias st="subl ."
 alias publickey="pbcopy < ~/.ssh/id_rsa.pub"
 alias l="ls -l"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# Text editor
+alias st="subl ."
+alias a="atom ."
 
 # Git aliases
 alias gs="git status"
