@@ -9,6 +9,7 @@ syntax on
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
+set backupskip=/tmp/*,/private/tmp/*
 
 " Basics -------------------------------------------------------------
 set autoindent " Copying autoindent
@@ -28,15 +29,15 @@ set wildmenu
 
 " Tabs
 set smarttab
-set softtabstop=2 
+set softtabstop=2
 
 " Tab options
-set expandtab 
+set expandtab
 set tabstop=2
 set shiftwidth=2
 
 " Invisible charater
-set lcs=tab:›\ ,trail:·,nbsp:_
+set listchars=tab:>-,trail:.,precedes:<,extends:>
 :set list
 
 " Numbers
@@ -59,7 +60,6 @@ iabbrev aa λ
 call plug#begin('~/.vim/plugged')
 
 " Utility
-Plug 'YankRing.vim'
 Plug 'ervandew/supertab'
 
 " Syntax
