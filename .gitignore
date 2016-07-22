@@ -13,3 +13,6 @@ vim/undo
 tmux/*
 !tmux/plugins/tpm
 !tmux/tmux.conf.symlink
+
+# Private
+bin/.private
