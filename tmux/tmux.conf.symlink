@@ -25,9 +25,9 @@ set -g pane-border-bg colour235
 set -g pane-active-border-fg colour220
 set -g pane-active-border-bg colour235
 
-# Easier splits
-bind | split-window -h
-bind - split-window -v
+# Easier splits with current path
+bind | split-window -h -c '#{pane_current_path}'
+bind - split-window -v -c '#{pane_current_path}'
 
 # Status Bar
 set -g status-position bottom
