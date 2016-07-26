@@ -8,6 +8,8 @@ if type "npm" > /dev/null; then
     bower \
     speed-test \
     broccoli-cli \
+    postcss-cli \
     postcss-debug  \
+    create-react-app \
     webpack
 fi
