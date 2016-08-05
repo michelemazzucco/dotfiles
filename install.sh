@@ -16,7 +16,6 @@ symlink_files() {
 }
 
 # Run setup
-
 run_setup() {
   message 'Starting setup...'
   './scripts/setup.sh'
