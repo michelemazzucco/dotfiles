@@ -2,12 +2,30 @@
 #
 # Main script.
 
-# General setup
-source './scripts/setup.sh'
+# Import config
+source './scripts/utils.sh'
+
+# Symlink all files in Home
+symlink_files() {
+  message 'Symlink all dots in your home folder...'
+  for file in $(find -H "$DOTS" -maxdepth 2 -name '*.symlink'); do
+    # TODO - Create a backup copy before override
+    ln -sfn "$file" "$DEST/.$(basename "${file%.*}")"
+  done
+  all_ok
+}
+
+# Run setup
+
+run_setup() {
+  message 'Starting setup...'
+  './scripts/setup.sh'
+  all_ok
+}
 
 # Run all installers
 run_installers() {
-  find . -mindepth 2 -name 'install.sh' | while read installer; do 
+  find . -mindepth 2 -name 'install.sh' | while read installer; do
     message "Run ${installer}..."
     ./"${installer}"
     all_ok
@@ -19,7 +37,7 @@ setup_osx_conf() {
   if [[ `uname` == 'Darwin' ]]; then
     read -r -p 'Are you sure to install my OSX configuration? [y/N] ' resp
     case $resp in
-      [yY]) 
+      [yY])
         "./scripts/osx.sh"
         ;;
       *)
@@ -29,8 +47,14 @@ setup_osx_conf() {
   fi
 }
 
-# run_installers
-setup_osx_conf
+main() {
+  symlink_files
+  run_setup
+  run_installers
+  setup_osx_conf
+}
+
+main "$@"
 
 # Switch to Zsh
 message 'Switch to Zsh...'

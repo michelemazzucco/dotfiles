@@ -3,17 +3,7 @@
 # Setup all the things.
 
 # Import config
-source './scripts/config.sh'
-
-# Symlink all files in Home
-symlink_files() {
-  message 'Symlink all dots in your home folder...'
-  for file in $(find -H "$DOTS" -maxdepth 2 -name '*.symlink'); do
-    # TODO - Create a backup copy before override
-    ln -sfn "$file" "$DEST/.$(basename "${file%.*}")"
-  done
-  all_ok
-}
+source './scripts/utils.sh'
 
 # Symlink vim folder and creates its subdirectories
 setup_vim_folder() {
@@ -57,7 +47,6 @@ copy_fonts() {
 
 # Main function - wrap all things
 main() {
-  symlink_files
   setup_vim_folder
   setup_bin_folder
   copy_fonts
