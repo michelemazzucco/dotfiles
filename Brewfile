@@ -44,7 +44,7 @@ cask 'dropbox'
 cask 'harvest'
 cask 'atom'
 cask 'sublime-text'
-cask 'iterm2'
+cask 'iterm2-beta'
 cask 'cleanmymac'
 cask 'appcleaner'
 cask 'imageoptim'
@@ -61,9 +61,6 @@ cask 'rightfont'
 # IM
 cask 'slack'
 cask 'skype'
-
-# For VMs
-cask 'parallels-desktop'
 
 # Freetime
 cask 'garmin-express'

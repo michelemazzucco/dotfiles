@@ -21,7 +21,7 @@ set_git_radar() {
   git-radar --zsh
 }
 
-set_prompt() {  
+set_prompt() {
   # Clear prompt
   PROMPT=''
   PROMPT="$(set_username) $(set_status)%30<...<%~%<<%{$reset_color%} %(!.#.$) "
