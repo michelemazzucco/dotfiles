@@ -24,5 +24,5 @@ fi
 # Zsh files
 export "DOTS=$HOME/.dotfiles"
 for file in $DOTS/**/*.zsh; do 
-  source "$file"; 
+  source "$file";
 done
