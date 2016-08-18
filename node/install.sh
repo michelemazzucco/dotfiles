@@ -11,5 +11,7 @@ if type "npm" > /dev/null; then
     postcss-cli \
     postcss-debug  \
     create-react-app \
-    webpack
+    webpack \
+    npm-check \
+    react-native-cli
 fi
