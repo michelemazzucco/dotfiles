@@ -6,8 +6,11 @@ FAILURE_COLOR=$FG[208]
 USER_COLOR=$FG[255]
 GIT_COLOR=$FG[221]
 
+# Opts
+ZLE_RPROMPT_INDENT=0
+
 set_status() {
-  echo "%(0?.%{$ZSH_SUCCESS_COLOR%}.%{$FAILURE_COLOR%})"
+  echo "%(0?.⚡️  %{$ZSH_SUCCESS_COLOR%}.🔥  %{$FAILURE_COLOR%})"
 }
 
 # set_username() {
@@ -24,7 +27,7 @@ set_git_radar() {
 set_prompt() {
   # Clear prompt
   PROMPT=''
-  PROMPT="🔥  $(set_status)%30<...<%~%<<%{$reset_color%} %(!.#.$) "
+  PROMPT="$(set_status)%30<...<%~%<<%{$reset_color%} %(!.#.$) "
 }
 
 set_rprompt() {
