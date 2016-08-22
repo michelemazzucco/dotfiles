@@ -7,10 +7,12 @@
 sudo -v
 
 # Keep it alive
-while true; do 
-  sudo -n true; sleep 60; kill -0 "$$" || exit; 
+while true; do
+  sudo -n true; sleep 60; kill -0 "$$" || exit;
 done 2>/dev/null &
 
+# Xcode Command Line Tools
+xcode-select --install
 
 # -----------------------------------------------
 # UI/UX
@@ -76,9 +78,11 @@ defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 # -----------------------------------------------
 
 # Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
+defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 
 # -----------------------------------------------
