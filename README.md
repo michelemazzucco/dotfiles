@@ -6,8 +6,8 @@ My dotfiles, nothing special.
 * Oh My Zsh installation
 * Vim and some plugins (Airline, Supertab, etc...)
 * Tmux and some plugins (Tpm, Resurect, Sensible, Copycat)
-* My favorites Brew packages
-* My favorites Npm packages
+* My favorites [Brew packages][brew-packages]
+* My favorites [Npm packages][npm-packages]
 * Programming Fonts
 
 [zsh-aliases]:   https://github.com/michelemazzucco/dotfiles/blob/master/zsh/aliases.zsh
