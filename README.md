@@ -1,7 +1,14 @@
 # Dotfiles
 My dotfiles, nothing special.
 
-## What's included?
+### Installation
+**Warning:** Use at your own risk!
+
+1. `cd ~/<your-folder-name>`
+2. `./install.sh`
+3. Have fun!
+
+### What's included?
 * Zsh with usefull [aliases][zsh-aliases], my custom [prompt][zsh-prompt] and some [functions][zsh-functions].
 * Oh My Zsh installation
 * Vim and some plugins (Airline, Supertab, etc...)
