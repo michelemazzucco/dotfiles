@@ -9,7 +9,7 @@ export BLUE="\e[0;34m"
 # -----------------------------------------------------------------
 # Go to project folder and open it, nothing special
 # -----------------------------------------------------------------
-function p() {
+function gp() {
   base_url=$HOME/projects # Your projects folder
   project=$1
   if [[ ! -d $base_url/$project ]]; then
@@ -39,12 +39,12 @@ function note() {
     vim $prv/$today/$name.$extension
   elif [[ "$1" == "prv" ]] && [[ -d $prv ]] && [[ -d $prv/$today ]]; then
     name=$2
-    vim $prv/$today/$name.$extension 
+    vim $prv/$today/$name.$extension
   elif [[ ! -z "$1" ]] && [[ ! "$1" == "prv" ]] && [[ -d $publ/$today ]]; then
     vim $publ/$today/$name.$extension
   elif [[ ! -z "$1" ]] && [[ ! "$1" == "prv" ]] && [[ ! -d $publ/$today ]]; then
     mkdir -p $publ/$today
-    vim $publ/$today/$name.$extension 
+    vim $publ/$today/$name.$extension
   elif [[ -z "$1" ]]; then
     printf "$RED""Provide a file name, i.e. 'an <name-of-your-file>' OR 'an prv <name-of-your-file>'.\n"
   fi

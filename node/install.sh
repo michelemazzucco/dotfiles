@@ -13,5 +13,6 @@ if type "npm" > /dev/null; then
     create-react-app \
     webpack \
     npm-check \
-    react-native-cli
+    react-native-cli \
+    gh-pages
 fi
