@@ -37,7 +37,7 @@ setup_osx_conf() {
     read -r -p 'Are you sure to install my OSX configuration? [y/N] ' resp
     case $resp in
       [yY])
-        "./scripts/macOs.sh"
+        "./scripts/macOS.sh"
         ;;
       *)
         message 'Ok, no problem!\n'
