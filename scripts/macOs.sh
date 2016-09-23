@@ -11,6 +11,9 @@ while true; do
   sudo -n true; sleep 60; kill -0 "$$" || exit;
 done 2>/dev/null &
 
+# Kill system preferences
+osascript -e "tell application \"System Preferences\" to quit"
+
 # Xcode Command Line Tools
 xcode-select --install
 
@@ -47,7 +50,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Increase cursor speed
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # -----------------------------------------------
 # Finder
