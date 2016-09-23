@@ -46,7 +46,8 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # -----------------------------------------------
 
 # Increase cursor speed
-defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # -----------------------------------------------
 # Finder
