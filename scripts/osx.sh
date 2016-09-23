@@ -46,7 +46,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # -----------------------------------------------
 
 # Increase cursor speed
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
 
 # -----------------------------------------------
 # Finder
@@ -101,6 +101,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Force Sketch to stop version control
 defaults write -app Sketch ApplePersistence -bool no
 
+# -----------------------------------------------
+# Torrent
+# -----------------------------------------------
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
 # -----------------------------------------------
 # Kill apps
