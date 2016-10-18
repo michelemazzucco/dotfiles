@@ -16,6 +16,11 @@ if which rbenv &> /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+# Yarn
+if which yarn &> /dev/null; then
+  export PATH="$PATH:$HOME/.yarn/bin"
+fi
+
 # Brew
 if which brew &> /dev/null; then
   export PATH="/usr/local/sbin:$PATH"
@@ -23,6 +28,6 @@ fi
 
 # Zsh files
 export "DOTS=$HOME/.dotfiles"
-for file in $DOTS/**/*.zsh; do 
+for file in $DOTS/**/*.zsh; do
   source "$file";
 done
