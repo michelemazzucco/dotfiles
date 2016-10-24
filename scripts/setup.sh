@@ -19,7 +19,7 @@ setup_vim_folder() {
   mkdir -p "$DEST/.vim/undo" \
     "$DEST/.vim/swaps" \
     "$DEST/.vim/backups"
-  all_ok
+  all_ok "$@"
 }
 
 # TODO - symlink of Tmux folder in your home
@@ -31,7 +31,7 @@ setup_bin_folder() {
   for file in $DOTS/bin/*; do
     ln -sfn "$file" "$DEST/bin/"
   done
-  all_ok
+  all_ok "$@"
 }
 
 # Copy fav fonts into system fonts folder
@@ -39,9 +39,9 @@ copy_fonts() {
   if [ -d "$DEST/Library/Fonts" ]; then
     message 'Copying fonts in your Library Fonts folder...'
     for file in $DOTS/fonts/*; do
-      cp -rf $file "$DEST/Library/Fonts"
+      cp -rf "$file $DEST/Library/Fonts"
     done
-    all_ok
+    all_ok "$@"
   fi
 }
 

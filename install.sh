@@ -12,28 +12,28 @@ symlink_files() {
     # TODO - Create a backup copy before override
     ln -sfn "$file" "$DEST/.$(basename "${file%.*}")"
   done
-  all_ok
+  all_ok "$@"
 }
 
 # Run setup
 run_setup() {
   message 'Starting setup...'
   './scripts/setup.sh'
-  all_ok
+  all_ok "$@"
 }
 
 # Run all installers
 run_installers() {
-  find . -mindepth 2 -name 'install.sh' | while read installer; do
+  find . -mindepth 2 -name 'install.sh' | while read -r installer; do
     message "Run ${installer}..."
     ./"${installer}"
-    all_ok
+    all_ok "$@"
   done
 }
 
 # OSX config
 setup_osx_conf() {
-  if [[ `uname` == 'Darwin' ]]; then
+  if [[ $(uname) == 'Darwin' ]]; then
     read -r -p 'Are you sure to install my OSX configuration? [y/N] ' resp
     case $resp in
       [yY])
@@ -47,10 +47,10 @@ setup_osx_conf() {
 }
 
 main() {
-  symlink_files
-  run_setup
-  run_installers
-  setup_osx_conf
+  symlink_files "$@"
+  run_setup "$@"
+  run_installers "$@"
+  setup_osx_conf "$@"
 }
 
 main "$@"
