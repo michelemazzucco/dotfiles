@@ -10,7 +10,7 @@ addons:
     - shellcheck
 
 script:
- - bash -c 'shopt -s globstar; shellcheck install.sh'
+ - shellcheck install.sh
 
 matrix:
   fast_finish: true
