@@ -28,6 +28,7 @@ brew 'tmux'
 brew 'reattach-to-user-namespace'
 brew 'watchman'
 brew 'httpie'
+brew 'utf8proc'
 # brew 'tmate'
 
 
