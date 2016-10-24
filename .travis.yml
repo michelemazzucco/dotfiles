@@ -1,12 +1,16 @@
-language: sh
+language: bash
 
-before_script:
-  - wget "http://ftp.debian.org/debian/pool/main/s/shellcheck/shellcheck_0.3.7-5_amd64.deb"
-  - sudo dpkg -i "shellcheck_0.3.7-5_amd64.deb"
+sudo: false
+
+addons:
+  apt:
+    sources:
+    - debian-sid
+    packages:
+    - shellcheck
 
 script:
-  - shellcheck install.sh
+ - bash -c 'shopt -s globstar; shellcheck install.sh
 
-branches:
-  only:
-    - master
+matrix:
+  fast_finish: true
