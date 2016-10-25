@@ -14,7 +14,6 @@ script:
  - shellcheck node/install.sh
  - shellcheck ruby/install.sh
  - shellcheck -x scripts/setup.sh
- - shellcheck scripts/utils.sh
  - shellcheck sublime/install.sh
  - shellcheck -x zsh/install.sh
  - shellcheck -x install.sh
