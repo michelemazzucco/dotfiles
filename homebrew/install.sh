@@ -7,12 +7,12 @@ brew_clean() {
   brew cleanup && brew cask cleanup
 }
 
-if type "brew" > /dev/null; then
+if command -v brew > /dev/null; then
   echo "Homebrew found. Let's Go!"
   brew update
 else
   echo "Homebrew not found. Installing..."
-  `ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"`
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Install Brew bundle
@@ -24,7 +24,7 @@ else
 fi
 
 brew bundle
-brew_clean
+brew_clean "$@"
 
 # After El Captin update use it
 # brew link openssl --force
