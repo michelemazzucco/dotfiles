@@ -1,4 +1,4 @@
-# Dotfiles
+# Dotfiles [![Build Status][build-img]][build]
 My dotfiles, nothing special.
 
 ## Installation
@@ -22,3 +22,5 @@ My dotfiles, nothing special.
 [zsh-functions]: https://github.com/michelemazzucco/dotfiles/blob/master/zsh/functions.zsh
 [brew-packages]: https://github.com/michelemazzucco/dotfiles/blob/master/Brewfile
 [npm-packages]:  https://github.com/michelemazzucco/dotfiles/blob/master/node/install.sh
+[build]:         https://travis-ci.org/michelemazzucco/dotfiles
+[build-img]:     https://travis-ci.org/michelemazzucco/dotfiles.svg?branch=master
