@@ -2,7 +2,7 @@
 #
 # Install global packages
 
-if type "npm" > /dev/null; then
+if command -v npm >/dev/null; then
   npm install -g \
     gulp \
     bower \

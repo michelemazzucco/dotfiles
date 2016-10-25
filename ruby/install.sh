@@ -2,7 +2,7 @@
 #
 # Use Ruby with rbenv and install some gems.
 
-if type "rbenv" > /dev/null; then
+if command -v rbenv >/dev/null; then
   echo "Installing Ruby with rbenv..."
   # Change ruby version if you want
   rbenv install 2.2.4 && rbenv local 2.2.4 && rbenv rehash

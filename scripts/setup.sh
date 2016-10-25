@@ -27,7 +27,7 @@ setup_vim_folder() {
 # Create bin folder and symlink content
 setup_bin_folder() {
   message 'Setup bin folder and copy the files..'
-  mkdir -p $DEST/bin
+  mkdir -p "$DEST/bin"
   for file in $DOTS/bin/*; do
     ln -sfn "$file" "$DEST/bin/"
   done
@@ -47,9 +47,9 @@ copy_fonts() {
 
 # Main function - wrap all things
 main() {
-  setup_vim_folder
-  setup_bin_folder
-  copy_fonts
+  setup_vim_folder "$@"
+  setup_bin_folder "$@"
+  copy_fonts "$@"
 }
 
 main "$@"

@@ -3,7 +3,7 @@
 # Sublime text preferences and packages.
 
 # Import config
-source './scripts/config.sh'
+source './scripts/utils.sh'
 
 subl_symlinks() {
   PACK=Package\ Control.sublime-settings
@@ -13,4 +13,4 @@ subl_symlinks() {
   ln -sfn "$DOTS/sublime/"{"$PACK","$PREF"} "$SUBL"
 }
 
-subl_symlinks
+subl_symlinks "$@"

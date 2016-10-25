@@ -8,9 +8,9 @@ source './scripts/utils.sh'
 # Symlink all files in Home
 symlink_files() {
   message 'Symlink all dots in your home folder...'
-  for file in $(find -H "$DOTS" -maxdepth 2 -name '*.symlink'); do
+  find . -name '*.symlink' | while read -r dot; do
     # TODO - Create a backup copy before override
-    ln -sfn "$file" "$DEST/.$(basename "${file%.*}")"
+    ln -sfn "$dot" "$DEST/.$(basename "${dot%.*}")"
   done
   all_ok "$@"
 }
