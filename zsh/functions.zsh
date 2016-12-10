@@ -9,13 +9,13 @@ export BLUE="\e[0;34m"
 # -----------------------------------------------------------------
 # Go to project folder and open it, nothing special
 # -----------------------------------------------------------------
-function gp() {
+function p-open() {
   base_url=$HOME/projects # Your projects folder
   project=$1
   if [[ ! -d $base_url/$project ]]; then
-    printf "$RED""Project '$1' not exist. Try again!\n\n"
+    printf "$RED" "Project '$1' not exist. Try again!\n\n"
   else
-    cd $base_url/$project
+    cd "$base_url/$project" || exit
   fi
 }
 
