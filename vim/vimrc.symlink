@@ -26,6 +26,7 @@ set title
 set noshowmode
 set visualbell
 set wildmenu
+set clipboard=unnamed
 
 " Tabs
 set smarttab
