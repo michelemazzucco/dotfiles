@@ -3,7 +3,7 @@
 # Install global packages
 
 if command -v npm >/dev/null; then
-  npm install -g \
+  npm install --global \
     gulp \
     bower \
     speed-test \
@@ -14,5 +14,6 @@ if command -v npm >/dev/null; then
     webpack \
     npm-check \
     react-native-cli \
-    gh-pages
+    gh-pages \
+    surge
 fi
