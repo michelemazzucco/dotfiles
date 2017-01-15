@@ -27,12 +27,14 @@ alias mysql.restart="brew services restart mysql"
 
 # Npm aliases
 alias ni="npm install"
-alias nis="npm install --save"
-alias nid="npm install --save-dev"
-alias nig="npm install --global"
 alias nr="npm run"
 alias ns="npm start"
 alias nf="npm cache clean && rm -rf node_modules && npm install"
+
+# yarn aliases
+alias yi="yarn install"
+alias ys="yarn start"
+alias yr="yarn run"
 
 # Tmux aliases
 alias tl="tmux list-sessions"
