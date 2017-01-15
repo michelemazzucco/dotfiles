@@ -43,9 +43,13 @@ set -g @prefix_highlight_bg colour220
 # Stop autorename windows
 set-option -g allow-rename off
 
+# Start windows and panes at 1, not 0
+set -g base-index 1
+setw -g pane-base-index 1
+
 # Current window status bar style
 setw -g window-status-current-bg colour237
-setw -g window-status-current-format ' #I#[fg=colour254] - #[fg=colour255]#W#[fg=colour220]#F '
+setw -g window-status-current-format ' #I#[fg=colour254] - #{net_speed}#[fg=colour255]#W#[fg=colour220]#F '
 setw -g window-status-current-attr bold
 
 # -----------------------------------------------
@@ -69,10 +73,16 @@ bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 # Plugins
 # -----------------------------------------------
 set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
 set -g @plugin 'tmux-plugins/tmux-copycat'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/tmux-net-speed'
+
+# Continuum options
+set -g @continuum-restore 'on'
+set -g @continuum-boot-options 'iterm'
 
 # Inizialize tpm
 run '~/.tmux/plugins/tpm/tpm'
