@@ -18,5 +18,6 @@
   helper = osxkeychain
 [core]
   excludesfile = /Users/michele/.gitignore
+	editor = vim
 [color]
   ui = auto
