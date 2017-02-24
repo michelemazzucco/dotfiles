@@ -81,7 +81,7 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-net-speed'
 
 # Continuum options
-set -g @continuum-restore 'on'
+set -g @continuum-boot 'on'
 set -g @continuum-boot-options 'iterm'
 
 # Inizialize tpm
