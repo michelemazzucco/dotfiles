@@ -49,7 +49,7 @@ setw -g pane-base-index 1
 
 # Current window status bar style
 setw -g window-status-current-bg colour237
-setw -g window-status-current-format ' #I#[fg=colour254] - #{net_speed}#[fg=colour255]#W#[fg=colour220]#F '
+setw -g window-status-current-format ' #I#[fg=colour254] - #[fg=colour255]#W#[fg=colour220]#F '
 setw -g window-status-current-attr bold
 
 # -----------------------------------------------
@@ -78,7 +78,6 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @plugin 'tmux-plugins/tmux-net-speed'
 
 # Continuum options
 set -g @continuum-boot 'on'
