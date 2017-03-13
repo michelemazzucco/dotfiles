@@ -7,13 +7,8 @@ if command -v npm >/dev/null; then
     gulp \
     bower \
     speed-test \
-    broccoli-cli \
-    postcss-cli \
-    postcss-debug  \
     create-react-app \
-    webpack \
+    create-react-native-app \
     npm-check \
-    react-native-cli \
-    gh-pages \
     surge
 fi
