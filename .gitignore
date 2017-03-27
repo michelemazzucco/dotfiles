@@ -16,3 +16,7 @@ tmux/*
 
 # Private
 bin/.private
+
+# VS Code
+.vscode/
+.vscode/*
