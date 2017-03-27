@@ -59,7 +59,7 @@ cask 'imageoptim'
 cask 'rescuetime'
 cask 'the-unarchiver'
 cask 'diffmerge'
-cask 'flux'
+# cask 'flux'
 
 # Design
 cask 'sketch'
