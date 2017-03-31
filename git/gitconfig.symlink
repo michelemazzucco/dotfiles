@@ -13,11 +13,11 @@
   cm = commit
   p = push
 [merge]
-  tool = opendiff 
+  tool = opendiff
 [credential]
   helper = osxkeychain
 [core]
-  excludesfile = /Users/michele/.gitignore
+  excludesfile = ~/.gitignore
 	editor = vim
 [color]
   ui = auto
