@@ -10,6 +10,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # Text editor
 alias st="subl ."
 alias a="atom ."
+alias c="code ."
 
 # Git aliases
 alias gs="git status"

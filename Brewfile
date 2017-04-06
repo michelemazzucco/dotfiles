@@ -63,7 +63,6 @@ cask 'diffmerge'
 
 # Design
 cask 'sketch'
-cask 'sketch-toolbox'
 cask 'adobe-creative-cloud'
 cask 'rightfont'
 
