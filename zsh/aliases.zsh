@@ -10,7 +10,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # Text editor
 alias st="subl ."
 alias a="atom ."
-alias c="code ."
+alias vs="code ."
 
 # Git aliases
 alias gs="git status"
@@ -36,6 +36,8 @@ alias nf="npm cache clean && rm -rf node_modules && npm install"
 alias yi="yarn install"
 alias ys="yarn start"
 alias yr="yarn run"
+alias yd="yarn run dev"
+alias yb="yarn run build"
 
 # Tmux aliases
 alias tl="tmux list-sessions"
