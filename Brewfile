@@ -14,7 +14,6 @@ tap 'homebrew/homebrew-php'
 # Some usefull packages
 brew 'git'
 brew 'node'
-brew 'yarn'
 brew 'tree'
 brew 'php56'
 brew 'drush'
