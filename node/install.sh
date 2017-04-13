@@ -11,5 +11,5 @@ if command -v npm >/dev/null; then
     yarn \
     gulp \
     now \
-    n \
+    n
 fi
