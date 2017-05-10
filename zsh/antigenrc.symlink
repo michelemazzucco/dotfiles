@@ -1,0 +1,12 @@
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle heroku
+antigen bundle node
+antigen bundle npm
+antigen bundle command-not-found
+
+# Theme
+antigen theme mgee/slimline
+
+antigen apply
