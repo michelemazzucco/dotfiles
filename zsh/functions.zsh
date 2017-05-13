@@ -7,22 +7,6 @@ export YELLOW="\e[1;33m"
 export BLUE="\e[0;34m"
 
 # -----------------------------------------------------------------
-# Go to project folder and open it, nothing special
-# -----------------------------------------------------------------
-function p-open() {
-  base_url=$HOME/projects # Your projects folder
-  project=$1
-  if [[ ! -d $base_url/$project ]]; then
-    printf "$RED" "Project '$1' not exist. Try again!\n\n"
-  else
-    cd "$base_url/$project" || exit
-  fi
-}
-
-# complete folder name
-compdef '_files -W "$HOME/projects"' p
-
-# -----------------------------------------------------------------
 # Add notes to my folder
 # -----------------------------------------------------------------
 function note() {
