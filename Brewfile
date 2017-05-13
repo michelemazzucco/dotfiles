@@ -27,7 +27,6 @@ brew 'openssl'
 brew 'tmux'
 brew 'reattach-to-user-namespace'
 brew 'watchman'
-brew 'httpie'
 brew 'utf8proc'
 brew 'shellcheck'
 # brew 'tmate'
@@ -35,7 +34,7 @@ brew 'shellcheck'
 
 # Shell
 brew 'zsh'
-brew 'michaeldfallen/formula/git-radar'
+brew 'antigen'
 
 # -----------------------------------------------
 # Install software
@@ -58,6 +57,7 @@ cask 'imageoptim'
 cask 'rescuetime'
 cask 'the-unarchiver'
 cask 'diffmerge'
+cask 'vanilla'
 # cask 'flux'
 
 # Design

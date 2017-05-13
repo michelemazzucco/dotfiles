@@ -1,16 +1,14 @@
 #!/bin/bash
 #
-# Install Oh My Zsh.
+# Install Antigen.
 
 # Import config
 source './scripts/utils.sh'
 
-setup_oh_my_zsh() {
-  if [[ ! -d "$DEST/.oh-my-zsh" ]]; then
-    message 'Installing Oh My Zsh...'
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    all_ok "$@"
+setup_antigen() {
+  if [[ ! -f "$DEST/.antigen.zsh" ]]; then
+    curl -L git.io/antigen > "$DEST/antigen.zsh"
   fi
 }
 
-setup_oh_my_zsh "$@"
+setup_antigen "$@"
