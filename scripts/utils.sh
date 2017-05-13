@@ -5,6 +5,7 @@
 # Vars
 DOTS=$(pwd)
 DEST=$HOME
+TODAY=`date +%F`
 
 # Functions for messages and errors
 message() {

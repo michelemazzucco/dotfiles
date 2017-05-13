@@ -7,9 +7,12 @@ source './scripts/utils.sh'
 
 # Symlink all files in Home
 symlink_files() {
+
   message 'Symlink all dots in your home folder...'
   find . -name '*.symlink' | while read -r dot; do
-    # TODO - Create a backup copy before override
+    if [[ -f "$DEST/.$(basename "${dot%.*}")" ]]; then
+      mv ".$(basename "${dot%.*}")" "$HOME/.$(basename "${dot%.*}").$TODAY.old"
+    fi
     ln -sfn "$dot" "$DEST/.$(basename "${dot%.*}")"
   done
   all_ok "$@"
