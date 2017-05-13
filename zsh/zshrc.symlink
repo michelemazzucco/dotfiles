@@ -1,12 +1,21 @@
 # Antigen
 source "$HOME/antigen.zsh"
-antigen init "$HOME/.antigenrc"
 
 # General conf
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$HOME/bin"
 export EDITOR="vim"
 export GIT_EDITOR=vim
+
+if which antigen &> /dev/null; then
+  antigen use oh-my-zsh
+  antigen bundle git
+  antigen bundle heroku
+  antigen bundle command-not-found
+  antigen bundle zsh-users/zsh-autosuggestions
+  antigen theme mgee/slimline
+  antigen apply
+fi
 
 # Zsh files
 export "DOTS=$HOME/.dotfiles"

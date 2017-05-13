@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Install Oh My Zsh.
+# Install Antigen.
 
 # Import config
 source './scripts/utils.sh'
