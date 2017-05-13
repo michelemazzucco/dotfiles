@@ -7,7 +7,6 @@ source './scripts/utils.sh'
 
 # Symlink all files in Home
 symlink_files() {
-
   message 'Symlink all dots in your home folder...'
   find . -name '*.symlink' | while read -r dot; do
     if [[ -f "$DEST/.$(basename "${dot%.*}")" ]]; then
