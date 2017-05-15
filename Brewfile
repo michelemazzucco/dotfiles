@@ -57,7 +57,7 @@ cask 'imageoptim'
 cask 'rescuetime'
 cask 'the-unarchiver'
 cask 'diffmerge'
-cask 'vanilla'
+# cask 'vanilla'
 # cask 'flux'
 
 # Design
