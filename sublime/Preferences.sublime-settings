@@ -1,6 +1,6 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Office Code Pro",
@@ -23,6 +23,6 @@
 	"material_theme_small_statusbar": true,
 	"overlay_scroll_bars": "enabled",
 	"tab_size": 2,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true
 }

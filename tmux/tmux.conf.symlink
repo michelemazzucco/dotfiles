@@ -72,16 +72,16 @@ bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 # -----------------------------------------------
 # Plugins
 # -----------------------------------------------
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
-set -g @plugin 'tmux-plugins/tmux-copycat'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
-
-# Continuum options
-set -g @continuum-boot 'on'
-set -g @continuum-boot-options 'iterm'
-
-# Inizialize tpm
-run '~/.tmux/plugins/tpm/tpm'
+# set -g @plugin 'tmux-plugins/tpm'
+# set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
+# set -g @plugin 'tmux-plugins/tmux-copycat'
+# set -g @plugin 'tmux-plugins/tmux-sensible'
+# set -g @plugin 'tmux-plugins/tmux-resurrect'
+# set -g @plugin 'tmux-plugins/tmux-continuum'
+# 
+# # Continuum options
+# set -g @continuum-boot 'on'
+# set -g @continuum-boot-options 'iterm'
+# 
+# # Inizialize tpm
+# run '~/.tmux/plugins/tpm/tpm'

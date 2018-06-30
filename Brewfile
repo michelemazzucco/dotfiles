@@ -48,9 +48,10 @@ cask 'opera'
 # Tools
 cask 'dropbox'
 cask 'harvest'
-cask 'atom'
-cask 'sublime-text'
-cask 'iterm2-beta'
+# cask 'atom'
+# cask 'sublime-text'
+cask 'visual-studio-code'
+cask 'iterm2'
 cask 'cleanmymac'
 cask 'appcleaner'
 cask 'imageoptim'
@@ -63,7 +64,7 @@ cask 'diffmerge'
 # Design
 cask 'sketch'
 cask 'adobe-creative-cloud'
-cask 'rightfont'
+#cask 'rightfont'
 
 # IM
 cask 'slack'
